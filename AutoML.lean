@@ -1,1 +1,1 @@
-import Test
+import AutoML.Test
