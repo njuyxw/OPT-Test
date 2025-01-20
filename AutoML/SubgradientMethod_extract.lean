@@ -6,51 +6,51 @@ open Filter Topology Set InnerProductSpace Finset
 
 open Finset
 
-theorem extracted_0 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_0 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {G : NNReal} (hf : ConvexOn ℝ Set.univ f) (hc : ContinuousOn f Set.univ)
   (h : ∀ ⦃x g : E⦄, g ∈ SubderivAt f x → ‖g‖ ≤ ↑G) : LipschitzWith G f := sorry
 
 
-theorem extracted_1 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_1 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {G : NNReal} (hf : ConvexOn ℝ Set.univ f) (hc : ContinuousOn f Set.univ)
   (h : ∀ ⦃x g : E⦄, g ∈ SubderivAt f x → ‖g‖ ≤ ↑G) (x gx : E) (hx₁ : gx ∈ SubderivAt f x) : ‖gx‖ ≤ ↑G := sorry
 
 
-theorem extracted_2 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_2 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {G : NNReal} (hf : ConvexOn ℝ Set.univ f) (hc : ContinuousOn f Set.univ)
   (h : ∀ ⦃x g : E⦄, g ∈ SubderivAt f x → ‖g‖ ≤ ↑G) (x y gx : E) (hx₁ : gx ∈ SubderivAt f x) (hx₃ : ‖gx‖ ≤ ↑G)
   (hx₂ : f y ≥ f x + ⟪gx, y - x⟫_ℝ) : f x - f y ≤ ⟪gx, x - y⟫_ℝ := sorry
 
 
-theorem extracted_3 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_3 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {G : NNReal} (hf : ConvexOn ℝ Set.univ f) (hc : ContinuousOn f Set.univ)
   (h : ∀ ⦃x g : E⦄, g ∈ SubderivAt f x → ‖g‖ ≤ ↑G) (x y gx : E) (hx₁ : gx ∈ SubderivAt f x) (hx₃ : ‖gx‖ ≤ ↑G)
   (hx₂ : f y ≥ f x + ⟪gx, y - x⟫_ℝ) (hx₄ : f x - f y ≤ ⟪gx, x - y⟫_ℝ) (gy : E) (hy₁ : gy ∈ SubderivAt f y) :
   ‖gy‖ ≤ ↑G := sorry
 
 
-theorem extracted_4 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_4 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {G : NNReal} (hf : ConvexOn ℝ Set.univ f) (hc : ContinuousOn f Set.univ)
   (h : ∀ ⦃x g : E⦄, g ∈ SubderivAt f x → ‖g‖ ≤ ↑G) (x y gx : E) (hx₁ : gx ∈ SubderivAt f x) (hx₃ : ‖gx‖ ≤ ↑G)
   (hx₂ : f y ≥ f x + ⟪gx, y - x⟫_ℝ) (hx₄ : f x - f y ≤ ⟪gx, x - y⟫_ℝ) (gy : E) (hy₁ : gy ∈ SubderivAt f y)
   (hy₃ : ‖gy‖ ≤ ↑G) (hy₂ : f x ≥ f y + ⟪gy, x - y⟫_ℝ) : f x - f y ≥ ⟪gy, x - y⟫_ℝ := sorry
 
 
-theorem extracted_5 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_5 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {G : NNReal} (hf : ConvexOn ℝ Set.univ f) (hc : ContinuousOn f Set.univ)
   (h : ∀ ⦃x g : E⦄, g ∈ SubderivAt f x → ‖g‖ ≤ ↑G) (x y gx : E) (hx₁ : gx ∈ SubderivAt f x) (hx₃ : ‖gx‖ ≤ ↑G)
   (hx₂ : f y ≥ f x + ⟪gx, y - x⟫_ℝ) (hx₄ : f x - f y ≤ ⟪gx, x - y⟫_ℝ) (gy : E) (hy₁ : gy ∈ SubderivAt f y)
   (hy₃ : ‖gy‖ ≤ ↑G) (hy₂ : f x ≥ f y + ⟪gy, x - y⟫_ℝ) : f x - f y ≥ f y + ⟪gy, x - y⟫_ℝ - f y := sorry
 
 
-theorem extracted_6 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_6 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {G : NNReal} (hf : ConvexOn ℝ Set.univ f) (hc : ContinuousOn f Set.univ)
   (h : ∀ ⦃x g : E⦄, g ∈ SubderivAt f x → ‖g‖ ≤ ↑G) (x y gx : E) (hx₁ : gx ∈ SubderivAt f x) (hx₃ : ‖gx‖ ≤ ↑G)
   (hx₂ : f y ≥ f x + ⟪gx, y - x⟫_ℝ) (hx₄ : f x - f y ≤ ⟪gx, x - y⟫_ℝ) (gy : E) (hy₁ : gy ∈ SubderivAt f y)
   (hy₃ : ‖gy‖ ≤ ↑G) (hy₂ : f x ≥ f y + ⟪gy, x - y⟫_ℝ) : f y + ⟪gy, x - y⟫_ℝ - f y = ⟪gy, x - y⟫_ℝ := sorry
 
 
-theorem extracted_7 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_7 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {G : NNReal} (hf : ConvexOn ℝ Set.univ f) (hc : ContinuousOn f Set.univ)
   (h : ∀ ⦃x g : E⦄, g ∈ SubderivAt f x → ‖g‖ ≤ ↑G) (x y gx : E) (hx₁ : gx ∈ SubderivAt f x) (hx₃ : ‖gx‖ ≤ ↑G)
   (hx₂ : f y ≥ f x + ⟪gx, y - x⟫_ℝ) (hx₄ : f x - f y ≤ ⟪gx, x - y⟫_ℝ) (gy : E) (hy₁ : gy ∈ SubderivAt f y)
@@ -58,7 +58,7 @@ theorem extracted_7 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inner
   ↑G = ENNReal.ofReal ↑G := sorry
 
 
-theorem extracted_8 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_8 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {G : NNReal} (hf : ConvexOn ℝ Set.univ f) (hc : ContinuousOn f Set.univ)
   (h : ∀ ⦃x g : E⦄, g ∈ SubderivAt f x → ‖g‖ ≤ ↑G) (x y gx : E) (hx₁ : gx ∈ SubderivAt f x) (hx₃ : ‖gx‖ ≤ ↑G)
   (hx₂ : f y ≥ f x + ⟪gx, y - x⟫_ℝ) (hx₄ : f x - f y ≤ ⟪gx, x - y⟫_ℝ) (gy : E) (hy₁ : gy ∈ SubderivAt f y)
@@ -66,7 +66,7 @@ theorem extracted_8 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inner
   ENNReal.ofReal (↑G * dist x y) = ENNReal.ofReal ↑G * ENNReal.ofReal (dist x y) := sorry
 
 
-theorem extracted_9 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_9 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {G : NNReal} (hf : ConvexOn ℝ Set.univ f) (hc : ContinuousOn f Set.univ)
   (h : ∀ ⦃x g : E⦄, g ∈ SubderivAt f x → ‖g‖ ≤ ↑G) (x y gx : E) (hx₁ : gx ∈ SubderivAt f x) (hx₃ : ‖gx‖ ≤ ↑G)
   (hx₂ : f y ≥ f x + ⟪gx, y - x⟫_ℝ) (hx₄ : f x - f y ≤ ⟪gx, x - y⟫_ℝ) (gy : E) (hy₁ : gy ∈ SubderivAt f y)
@@ -75,54 +75,54 @@ theorem extracted_9 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inner
   (h₁ : dist (f x) (f y) = |f x - f y|) : ⟪gy, x - y⟫_ℝ ≥ -(‖gy‖ * ‖x - y‖) := sorry
 
 
-theorem extracted_10 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_10 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {G : NNReal} (h : LipschitzWith G f) ⦃x g : E⦄ :
   g ∈ SubderivAt f x → ‖g‖ ≤ ↑G := sorry
 
 
-theorem extracted_11 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_11 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {G : NNReal} (h : LipschitzWith G f) (x g : E) (h₂ : g ∈ SubderivAt f x)
   (h₃ : ↑G < ‖g‖) :
   let y := x + (1 / ‖g‖) • g;
   y = x + (1 / ‖g‖) • g := sorry
 
 
-theorem extracted_12 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_12 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {G : NNReal} (h : ∀ (x y : E), edist (f x) (f y) ≤ ↑G * edist x y) (x g : E)
   (h₂ : g ∈ SubderivAt f x) (h₃ : ↑G < ‖g‖) :
   let y := x + (1 / ‖g‖) • g;
   y = x + (1 / ‖g‖) • g → f y ≥ f x + ⟪g, y - x⟫_ℝ → ‖g‖ ≠ 0 := sorry
 
 
-theorem extracted_13 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_13 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {G : NNReal} (h : ∀ (x y : E), edist (f x) (f y) ≤ ↑G * edist x y) (x g : E)
   (h₂ : g ∈ SubderivAt f x) (h₃ : ↑G < ‖g‖) :
   let y := x + (1 / ‖g‖) • g;
   y = x + (1 / ‖g‖) • g → f y ≥ f x + ⟪g, y - x⟫_ℝ → ‖g‖ ≠ 0 → ⟪g, y - x⟫_ℝ = ‖g‖ := sorry
 
 
-theorem extracted_14 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_14 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {G : NNReal} (h : ∀ (x y : E), edist (f x) (f y) ≤ ↑G * edist x y) (x g : E)
   (h₂ : g ∈ SubderivAt f x) (h₃ : ↑G < ‖g‖) :
   let y := x + (1 / ‖g‖) • g;
   y = x + (1 / ‖g‖) • g → f y ≥ f x + ‖g‖ → ‖g‖ ≠ 0 → ⟪g, y - x⟫_ℝ = ‖g‖ → f y - f x ≥ ‖g‖ := sorry
 
 
-theorem extracted_15 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_15 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {G : NNReal} (h : ∀ (x y : E), edist (f x) (f y) ≤ ↑G * edist x y) (x g : E)
   (h₂ : g ∈ SubderivAt f x) (h₃ : ↑G < ‖g‖) :
   let y := x + (1 / ‖g‖) • g;
   y = x + (1 / ‖g‖) • g → f y ≥ f x + ‖g‖ → ‖g‖ ≠ 0 → ⟪g, y - x⟫_ℝ = ‖g‖ → f y - f x ≥ f x + ‖g‖ - f x := sorry
 
 
-theorem extracted_16 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_16 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {G : NNReal} (h : ∀ (x y : E), edist (f x) (f y) ≤ ↑G * edist x y) (x g : E)
   (h₂ : g ∈ SubderivAt f x) (h₃ : ↑G < ‖g‖) :
   let y := x + (1 / ‖g‖) • g;
   y = x + (1 / ‖g‖) • g → f y ≥ f x + ‖g‖ → ‖g‖ ≠ 0 → ⟪g, y - x⟫_ℝ = ‖g‖ → f x + ‖g‖ - f x = ‖g‖ := sorry
 
 
-theorem extracted_17 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_17 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {G : NNReal} (h : ∀ (x y : E), edist (f x) (f y) ≤ ↑G * edist x y) (x g : E)
   (h₂ : g ∈ SubderivAt f x) (h₃ : ↑G < ‖g‖) :
   let y := x + (1 / ‖g‖) • g;
@@ -132,7 +132,7 @@ theorem extracted_17 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
         ⟪g, y - x⟫_ℝ = ‖g‖ → f y - f x ≥ ‖g‖ → edist (f x) (f y) ≤ ↑G * edist x y → ↑G = ENNReal.ofReal ↑G := sorry
 
 
-theorem extracted_18 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_18 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {G : NNReal} (h : ∀ (x y : E), edist (f x) (f y) ≤ ↑G * edist x y) (x g : E)
   (h₂ : g ∈ SubderivAt f x) (h₃ : ↑G < ‖g‖) :
   let y := x + (1 / ‖g‖) • g;
@@ -146,7 +146,7 @@ theorem extracted_18 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
                 ENNReal.ofReal (↑G * dist x y) = ENNReal.ofReal ↑G * ENNReal.ofReal (dist x y) := sorry
 
 
-theorem extracted_19 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_19 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {G : NNReal} (h : ∀ (x y : E), edist (f x) (f y) ≤ ↑G * edist x y) (x g : E)
   (h₂ : g ∈ SubderivAt f x) (h₃ : ↑G < ‖g‖) :
   let y := x + (1 / ‖g‖) • g;
@@ -161,7 +161,7 @@ theorem extracted_19 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
                   0 ≤ ↑G * dist x y → dist (f x) (f y) ≤ ↑G * dist x y → dist (f x) (f y) = |f x - f y| := sorry
 
 
-theorem extracted_20 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_20 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {G : NNReal} (h : ∀ (x y : E), edist (f x) (f y) ≤ ↑G * edist x y) (x g : E)
   (h₂ : g ∈ SubderivAt f x) (h₃ : ↑G < ‖g‖) :
   let y := x + (1 / ‖g‖) • g;
@@ -177,7 +177,7 @@ theorem extracted_20 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
                     |f y - f x| ≤ ↑G * (‖1 / ‖g‖‖ * ‖g‖) → dist (f x) (f y) = |f x - f y| → f y - f x < ‖g‖ := sorry
 
 
-theorem extracted_21 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_21 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {G : NNReal} (h : ∀ (x y : E), edist (f x) (f y) ≤ ↑G * edist x y) (x g : E)
   (h₂ : g ∈ SubderivAt f x) (h₃ : ↑G < ‖g‖) :
   let y := x + (1 / ‖g‖) • g;
@@ -194,7 +194,7 @@ theorem extracted_21 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
                       dist (f x) (f y) = |f x - f y| → f y - f x ≤ |f y - f x| := sorry
 
 
-theorem extracted_22 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_22 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {G : NNReal} (h : ∀ (x y : E), edist (f x) (f y) ≤ ↑G * edist x y) (x g : E)
   (h₂ : g ∈ SubderivAt f x) (h₃ : ↑G < ‖g‖) :
   let y := x + (1 / ‖g‖) • g;
@@ -211,7 +211,7 @@ theorem extracted_22 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
                       dist (f x) (f y) = |f x - f y| → |f y - f x| ≤ ↑G * (‖1 / ‖g‖‖ * ‖g‖) := sorry
 
 
-theorem extracted_23 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_23 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {G : NNReal} (h : ∀ (x y : E), edist (f x) (f y) ≤ ↑G * edist x y) (x g : E)
   (h₂ : g ∈ SubderivAt f x) (h₃ : ↑G < ‖g‖) :
   let y := x + (1 / ‖g‖) • g;
@@ -228,7 +228,7 @@ theorem extracted_23 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
                       dist (f x) (f y) = |f x - f y| → ↑G * (‖1 / ‖g‖‖ * ‖g‖) = ↑G := sorry
 
 
-theorem extracted_24 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_24 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {G : NNReal} (h : ∀ (x y : E), edist (f x) (f y) ≤ ↑G * edist x y) (x g : E)
   (h₂ : g ∈ SubderivAt f x) (h₃ : ↑G < ‖g‖) :
   let y := x + (1 / ‖g‖) • g;
@@ -244,7 +244,7 @@ theorem extracted_24 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
                     |f y - f x| ≤ ↑G * (‖1 / ‖g‖‖ * ‖g‖) → dist (f x) (f y) = |f x - f y| → ↑G < ‖g‖ := sorry
 
 
-theorem extracted_25 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_25 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) {alg : subgradient_method f x₀} (k : ℕ) :
   2 * (Finset.range (k + 1)).sum (subgradient_method.a f x₀) *
       (sInf {x | ∃ i ∈ Finset.range (k + 1), f (subgradient_method.x f x₀ i) = x} - f xm) ≤
@@ -252,7 +252,7 @@ theorem extracted_25 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
       ↑(subgradient_method.G f x₀) ^ 2 * ∑ i ∈ Finset.range (k + 1), subgradient_method.a f x₀ i ^ 2 := sorry
 
 
-theorem extracted_26 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_26 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) {alg : subgradient_method f x₀}
   (h' : ∀ ⦃x g : E⦄, g ∈ SubderivAt f x → ‖g‖ ≤ ↑(subgradient_method.G f x₀))
   (hk₀ : f xm ≥ f (subgradient_method.x f x₀ 0) + ⟪subgradient_method.g f x₀ 0, xm - subgradient_method.x f x₀ 0⟫_ℝ)
@@ -260,14 +260,14 @@ theorem extracted_26 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
   f (subgradient_method.x f x₀ 0) - f xm ≤ -⟪subgradient_method.g f x₀ 0, xm - subgradient_method.x f x₀ 0⟫_ℝ := sorry
 
 
-theorem extracted_27 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_27 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) {alg : subgradient_method f x₀} (k : ℕ)
   (h' : ∀ ⦃x g : E⦄, g ∈ SubderivAt f x → ‖g‖ ≤ ↑(subgradient_method.G f x₀)) (k₀ : ¬k = 0) :
   (Set.range fun x => f (subgradient_method.x f x₀ ↑x)) =
     {x | ∃ i ∈ Finset.range (k + 1), f (subgradient_method.x f x₀ i) = x} := sorry
 
 
-theorem extracted_28 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_28 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) {alg : subgradient_method f x₀} (k : ℕ)
   (h' : ∀ ⦃x g : E⦄, g ∈ SubderivAt f x → ‖g‖ ≤ ↑(subgradient_method.G f x₀)) (k₀ : ¬k = 0)
   (heq :
@@ -282,7 +282,7 @@ theorem extracted_28 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
         ↑(subgradient_method.G f x₀) ^ 2 * subgradient_method.a f x₀ i ^ 2 := sorry
 
 
-theorem extracted_29 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_29 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) {alg : subgradient_method f x₀} (k : ℕ)
   (h' : ∀ ⦃x g : E⦄, g ∈ SubderivAt f x → ‖g‖ ≤ ↑(subgradient_method.G f x₀)) (k₀ : ¬k = 0)
   (heq :
@@ -299,7 +299,7 @@ theorem extracted_29 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
       ↑(subgradient_method.G f x₀) ^ 2 * subgradient_method.a f x₀ i ^ 2 := sorry
 
 
-theorem extracted_30 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_30 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) {alg : subgradient_method f x₀} (k : ℕ)
   (h' : ∀ ⦃x g : E⦄, g ∈ SubderivAt f x → ‖g‖ ≤ ↑(subgradient_method.G f x₀)) (k₀ : ¬k = 0)
   (heq :
@@ -319,7 +319,7 @@ theorem extracted_30 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
     ↑(subgradient_method.G f x₀) ^ 2 * subgradient_method.a f x₀ i ^ 2 := sorry
 
 
-theorem extracted_31 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_31 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) {alg : subgradient_method f x₀} (k : ℕ)
   (h' : ∀ ⦃x g : E⦄, g ∈ SubderivAt f x → ‖g‖ ≤ ↑(subgradient_method.G f x₀)) (k₀ : ¬k = 0)
   (heq :
@@ -343,7 +343,7 @@ theorem extracted_31 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
     2 * ⟪subgradient_method.x f x₀ i - xm, subgradient_method.a f x₀ i • subgradient_method.g f x₀ i⟫_ℝ := sorry
 
 
-theorem extracted_32 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_32 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) {alg : subgradient_method f x₀} (k : ℕ)
   (h' : ∀ ⦃x g : E⦄, g ∈ SubderivAt f x → ‖g‖ ≤ ↑(subgradient_method.G f x₀)) (k₀ : ¬k = 0)
   (heq :
@@ -367,7 +367,7 @@ theorem extracted_32 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
     sInf (Set.range fun x => f (subgradient_method.x f x₀ ↑x)) - f xm := sorry
 
 
-theorem extracted_33 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_33 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) {alg : subgradient_method f x₀} (k : ℕ)
   (h' : ∀ ⦃x g : E⦄, g ∈ SubderivAt f x → ‖g‖ ≤ ↑(subgradient_method.G f x₀)) (k₀ : ¬k = 0)
   (heq :
@@ -390,7 +390,7 @@ theorem extracted_33 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
   sInf (Set.range fun x => f (subgradient_method.x f x₀ ↑x)) - f xm ≤ f (subgradient_method.x f x₀ i) - f xm := sorry
 
 
-theorem extracted_34 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_34 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) {alg : subgradient_method f x₀} (k : ℕ)
   (h' : ∀ ⦃x g : E⦄, g ∈ SubderivAt f x → ‖g‖ ≤ ↑(subgradient_method.G f x₀)) (k₀ : ¬k = 0)
   (heq :
@@ -413,7 +413,7 @@ theorem extracted_34 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
   f (subgradient_method.x f x₀ i) ∈ Set.range fun x => f (subgradient_method.x f x₀ ↑x) := sorry
 
 
-theorem extracted_35 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_35 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) {alg : subgradient_method f x₀} (k : ℕ)
   (h' : ∀ ⦃x g : E⦄, g ∈ SubderivAt f x → ‖g‖ ≤ ↑(subgradient_method.G f x₀)) (k₀ : ¬k = 0)
   (heq :
@@ -436,7 +436,7 @@ theorem extracted_35 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
   f (subgradient_method.x f x₀ i) - f xm ≤ ⟪subgradient_method.x f x₀ i - xm, subgradient_method.g f x₀ i⟫_ℝ := sorry
 
 
-theorem extracted_36 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_36 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) {alg : subgradient_method f x₀} (k : ℕ)
   (h' : ∀ ⦃x g : E⦄, g ∈ SubderivAt f x → ‖g‖ ≤ ↑(subgradient_method.G f x₀)) (k₀ : ¬k = 0)
   (heq :
@@ -458,7 +458,7 @@ theorem extracted_36 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
         ↑(subgradient_method.G f x₀) ^ 2 * subgradient_method.a f x₀ i ^ 2 := sorry
 
 
-theorem extracted_37 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_37 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) {alg : subgradient_method f x₀} (k : ℕ)
   (h' : ∀ ⦃x g : E⦄, g ∈ SubderivAt f x → ‖g‖ ≤ ↑(subgradient_method.G f x₀)) (k₀ : ¬k = 0)
   (heq :
@@ -485,7 +485,7 @@ theorem extracted_37 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
       ↑(subgradient_method.G f x₀) ^ 2 * subgradient_method.a f x₀ i ^ 2 := sorry
 
 
-theorem extracted_38 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_38 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) {alg : subgradient_method f x₀} (k : ℕ)
   (h' : ∀ ⦃x g : E⦄, g ∈ SubderivAt f x → ‖g‖ ≤ ↑(subgradient_method.G f x₀)) (k₀ : ¬k = 0)
   (heq :
@@ -514,7 +514,7 @@ theorem extracted_38 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
         ↑(subgradient_method.G f x₀) ^ 2 * subgradient_method.a f x₀ i ^ 2) := sorry
 
 
-theorem extracted_39 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_39 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) {alg : subgradient_method f x₀} (k : ℕ)
   (h' : ∀ ⦃x g : E⦄, g ∈ SubderivAt f x → ‖g‖ ≤ ↑(subgradient_method.G f x₀)) (k₀ : ¬k = 0)
   (heq :
@@ -538,7 +538,7 @@ theorem extracted_39 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
   (i : ℕ) (hi : i ∈ Finset.range (k + 1)) : i < k + 1 := sorry
 
 
-theorem extracted_40 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_40 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) {alg : subgradient_method f x₀} (k : ℕ)
   (h' : ∀ ⦃x g : E⦄, g ∈ SubderivAt f x → ‖g‖ ≤ ↑(subgradient_method.G f x₀)) (k₀ : ¬k = 0)
   (heq :
@@ -570,7 +570,7 @@ theorem extracted_40 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
       (sInf {x | ∃ i ∈ Finset.range (k + 1), f (subgradient_method.x f x₀ i) = x} - f xm) := sorry
 
 
-theorem extracted_41 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_41 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) {alg : subgradient_method f x₀} (k : ℕ)
   (h' : ∀ ⦃x g : E⦄, g ∈ SubderivAt f x → ‖g‖ ≤ ↑(subgradient_method.G f x₀)) (k₀ : ¬k = 0)
   (heq :
@@ -602,7 +602,7 @@ theorem extracted_41 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
       ↑(subgradient_method.G f x₀) ^ 2 * ∑ x ∈ Finset.range (k + 1), subgradient_method.a f x₀ x ^ 2 := sorry
 
 
-theorem extracted_42 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_42 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) {alg : subgradient_method f x₀} (k : ℕ)
   (h' : ∀ ⦃x g : E⦄, g ∈ SubderivAt f x → ‖g‖ ≤ ↑(subgradient_method.G f x₀)) (k₀ : ¬k = 0)
   (heq :
@@ -634,19 +634,19 @@ theorem extracted_42 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
       ↑(subgradient_method.G f x₀) ^ 2 * ∑ x ∈ Finset.range (k + 1), subgradient_method.a f x₀ x ^ 2 := sorry
 
 
-theorem extracted_43 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_43 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) {alg : subgradient_method f x₀} {t : ℝ}
   (ha' : ∀ (n : ℕ), subgradient_method.a f x₀ n = t) (k : ℕ) :
   sInf {x | ∃ i ∈ Finset.range (k + 1), f (subgradient_method.x f x₀ i) = x} - f xm ≤
     ‖x₀ - xm‖ ^ 2 / (2 * (↑k + 1) * t) + ↑(subgradient_method.G f x₀) ^ 2 * t / 2 := sorry
 
 
-theorem extracted_44 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_44 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) {alg : subgradient_method f x₀} {t : ℝ}
   (ha' : ∀ (n : ℕ), subgradient_method.a f x₀ n = t) : t > 0 := sorry
 
 
-theorem extracted_45 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_45 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) {alg : subgradient_method f x₀} {t : ℝ}
   (ha' : ∀ (n : ℕ), subgradient_method.a f x₀ n = t) (ht : t > 0) (k : ℕ) :
   2 * (Finset.range (k + 1)).sum (subgradient_method.a f x₀) *
@@ -655,7 +655,7 @@ theorem extracted_45 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
       ↑(subgradient_method.G f x₀) ^ 2 * ∑ i ∈ Finset.range (k + 1), subgradient_method.a f x₀ i ^ 2 := sorry
 
 
-theorem extracted_46 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_46 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) {alg : subgradient_method f x₀} {t : ℝ}
   (ha' : ∀ (n : ℕ), subgradient_method.a f x₀ n = t) (k : ℕ) (ht : t > 0)
   (h₁ :
@@ -669,7 +669,7 @@ theorem extracted_46 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
   2 * ((↑k + 1) * t) > 0 := sorry
 
 
-theorem extracted_47 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_47 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) {alg : subgradient_method f x₀} {t : ℝ}
   (ha' : ∀ (n : ℕ), subgradient_method.a f x₀ n = t) (k : ℕ) (ht : t > 0)
   (h₁ :
@@ -685,7 +685,7 @@ theorem extracted_47 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
     2 * ((↑k + 1) * t) * (sInf {x | ∃ i < k + 1, f (subgradient_method.x f x₀ i) = x} - f xm) := sorry
 
 
-theorem extracted_48 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_48 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) {alg : subgradient_method f x₀} {t : ℝ}
   (ha' : ∀ (n : ℕ), subgradient_method.a f x₀ n = t) (k : ℕ) (ht : t > 0)
   (h₁ :
@@ -701,7 +701,7 @@ theorem extracted_48 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
     ‖x₀ - xm‖ ^ 2 + ↑(subgradient_method.G f x₀) ^ 2 * ((↑k + 1) * t ^ 2) := sorry
 
 
-theorem extracted_49 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_49 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) {alg : subgradient_method f x₀} {t : ℝ}
   (ha' : ∀ (n : ℕ), subgradient_method.a f x₀ n = t) (k : ℕ) (ht : t > 0)
   (h₁ :
@@ -717,21 +717,21 @@ theorem extracted_49 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
     2 * ((↑k + 1) * t) * (‖x₀ - xm‖ ^ 2 / (2 * (↑k + 1) * t) + ↑(subgradient_method.G f x₀) ^ 2 * t / 2) := sorry
 
 
-theorem extracted_50 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_50 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   {s : ℝ} (ha' : ∀ (n : ℕ), subgradient_method.a f x₀ n * ‖subgradient_method.g f x₀ n‖ = s) (hs : s > 0) (k : ℕ) :
   sInf {x | ∃ i ∈ Finset.range (k + 1), f (subgradient_method.x f x₀ i) = x} - f xm ≤
     ↑(subgradient_method.G f x₀) * ‖x₀ - xm‖ ^ 2 / (2 * (↑k + 1) * s) + ↑(subgradient_method.G f x₀) * s / 2 := sorry
 
 
-theorem extracted_51 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_51 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   {s : ℝ} (ha' : ∀ (n : ℕ), subgradient_method.a f x₀ n * ‖subgradient_method.g f x₀ n‖ = s) (hs : s > 0) (k : ℕ) :
   (Set.range fun x => f (subgradient_method.x f x₀ ↑x)) =
     {x | ∃ i ∈ Finset.range (k + 1), f (subgradient_method.x f x₀ i) = x} := sorry
 
 
-theorem extracted_52 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_52 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   {s : ℝ} (ha' : ∀ (n : ℕ), subgradient_method.a f x₀ n * ‖subgradient_method.g f x₀ n‖ = s) (hs : s > 0) (k : ℕ)
   (heq :
@@ -740,7 +740,7 @@ theorem extracted_52 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
   Nonempty { x // x ∈ Finset.range (k + 1) } := sorry
 
 
-theorem extracted_53 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_53 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   {s : ℝ} (ha' : ∀ (n : ℕ), subgradient_method.a f x₀ n * ‖subgradient_method.g f x₀ n‖ = s) (hs : s > 0) (k : ℕ)
   (heq :
@@ -756,7 +756,7 @@ theorem extracted_53 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
         ‖subgradient_method.a f x₀ i‖ ^ 2 * ‖subgradient_method.g f x₀ i‖ ^ 2 := sorry
 
 
-theorem extracted_54 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_54 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   {s : ℝ} (ha' : ∀ (n : ℕ), subgradient_method.a f x₀ n * ‖subgradient_method.g f x₀ n‖ = s) (hs : s > 0) (k : ℕ)
   (heq :
@@ -774,7 +774,7 @@ theorem extracted_54 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
       ‖subgradient_method.a f x₀ i‖ ^ 2 * ‖subgradient_method.g f x₀ i‖ ^ 2 := sorry
 
 
-theorem extracted_55 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_55 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   {s : ℝ} (ha' : ∀ (n : ℕ), subgradient_method.a f x₀ n * ‖subgradient_method.g f x₀ n‖ = s) (hs : s > 0) (k : ℕ)
   (heq :
@@ -796,7 +796,7 @@ theorem extracted_55 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
     2 * ⟪subgradient_method.x f x₀ i - xm, subgradient_method.a f x₀ i • subgradient_method.g f x₀ i⟫_ℝ := sorry
 
 
-theorem extracted_56 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_56 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   {s : ℝ} (ha' : ∀ (n : ℕ), subgradient_method.a f x₀ n * ‖subgradient_method.g f x₀ n‖ = s) (hs : s > 0) (k : ℕ)
   (heq :
@@ -818,7 +818,7 @@ theorem extracted_56 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
     sInf (Set.range fun x => f (subgradient_method.x f x₀ ↑x)) - f xm := sorry
 
 
-theorem extracted_57 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_57 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   {s : ℝ} (ha' : ∀ (n : ℕ), subgradient_method.a f x₀ n * ‖subgradient_method.g f x₀ n‖ = s) (hs : s > 0) (k : ℕ)
   (heq :
@@ -839,7 +839,7 @@ theorem extracted_57 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
   sInf (Set.range fun x => f (subgradient_method.x f x₀ ↑x)) - f xm ≤ f (subgradient_method.x f x₀ i) - f xm := sorry
 
 
-theorem extracted_58 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_58 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   {s : ℝ} (ha' : ∀ (n : ℕ), subgradient_method.a f x₀ n * ‖subgradient_method.g f x₀ n‖ = s) (hs : s > 0) (k : ℕ)
   (heq :
@@ -860,7 +860,7 @@ theorem extracted_58 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
   f (subgradient_method.x f x₀ i) ∈ Set.range fun x => f (subgradient_method.x f x₀ ↑x) := sorry
 
 
-theorem extracted_59 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_59 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   {s : ℝ} (ha' : ∀ (n : ℕ), subgradient_method.a f x₀ n * ‖subgradient_method.g f x₀ n‖ = s) (hs : s > 0) (k : ℕ)
   (heq :
@@ -881,7 +881,7 @@ theorem extracted_59 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
   f (subgradient_method.x f x₀ i) - f xm ≤ ⟪subgradient_method.x f x₀ i - xm, subgradient_method.g f x₀ i⟫_ℝ := sorry
 
 
-theorem extracted_60 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_60 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   {s : ℝ} (ha' : ∀ (n : ℕ), subgradient_method.a f x₀ n * ‖subgradient_method.g f x₀ n‖ = s) (hs : s > 0) (k : ℕ)
   (heq :
@@ -904,7 +904,7 @@ theorem extracted_60 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
       ‖subgradient_method.x f x₀ i - xm‖ ^ 2 - ‖subgradient_method.x f x₀ (i + 1) - xm‖ ^ 2 + s ^ 2 := sorry
 
 
-theorem extracted_61 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_61 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   {s : ℝ} (ha' : ∀ (n : ℕ), subgradient_method.a f x₀ n * ‖subgradient_method.g f x₀ n‖ = s) (hs : s > 0) (k : ℕ)
   (heq :
@@ -933,7 +933,7 @@ theorem extracted_61 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
       ‖subgradient_method.a f x₀ i‖ ^ 2 * ‖subgradient_method.g f x₀ i‖ ^ 2 := sorry
 
 
-theorem extracted_62 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_62 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   {s : ℝ} (ha' : ∀ (n : ℕ), subgradient_method.a f x₀ n * ‖subgradient_method.g f x₀ n‖ = s) (hs : s > 0) (k : ℕ)
   (heq :
@@ -961,7 +961,7 @@ theorem extracted_62 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
     ‖subgradient_method.x f x₀ i - xm‖ ^ 2 - ‖subgradient_method.x f x₀ (i + 1) - xm‖ ^ 2 + s ^ 2 := sorry
 
 
-theorem extracted_63 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_63 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   {s : ℝ} (ha' : ∀ (n : ℕ), subgradient_method.a f x₀ n * ‖subgradient_method.g f x₀ n‖ = s) (hs : s > 0) (k : ℕ)
   (heq :
@@ -990,7 +990,7 @@ theorem extracted_63 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
       (‖subgradient_method.x f x₀ i - xm‖ ^ 2 - ‖subgradient_method.x f x₀ (i + 1) - xm‖ ^ 2 + s ^ 2) := sorry
 
 
-theorem extracted_64 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_64 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   {s : ℝ} (ha' : ∀ (n : ℕ), subgradient_method.a f x₀ n * ‖subgradient_method.g f x₀ n‖ = s) (hs : s > 0) (k : ℕ)
   (heq :
@@ -1019,7 +1019,7 @@ theorem extracted_64 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
   ↑(subgradient_method.G f x₀) > 0 := sorry
 
 
-theorem extracted_65 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_65 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   {s : ℝ} (ha' : ∀ (n : ℕ), subgradient_method.a f x₀ n * ‖subgradient_method.g f x₀ n‖ = s) (hs : s > 0) (k : ℕ)
   (heq :
@@ -1048,7 +1048,7 @@ theorem extracted_65 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
   subgradient_method.a f x₀ 0 * ‖subgradient_method.g f x₀ 0‖ > 0 := sorry
 
 
-theorem extracted_66 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_66 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   {s : ℝ} (ha' : ∀ (n : ℕ), subgradient_method.a f x₀ n * ‖subgradient_method.g f x₀ n‖ = s) (hs : s > 0) (k : ℕ)
   (heq :
@@ -1078,7 +1078,7 @@ theorem extracted_66 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
   ∑ x ∈ Finset.range (k + 1), subgradient_method.a f x₀ x ≥ (↑k + 1) * (s / ↑(subgradient_method.G f x₀)) := sorry
 
 
-theorem extracted_67 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_67 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   {s : ℝ} (ha' : ∀ (n : ℕ), subgradient_method.a f x₀ n * ‖subgradient_method.g f x₀ n‖ = s) (hs : s > 0) (k : ℕ)
   (heq :
@@ -1108,7 +1108,7 @@ theorem extracted_67 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
   ∑ x ∈ Finset.range (k + 1), s / ↑(subgradient_method.G f x₀) = (↑k + 1) * (s / ↑(subgradient_method.G f x₀)) := sorry
 
 
-theorem extracted_68 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_68 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   {s : ℝ} (ha' : ∀ (n : ℕ), subgradient_method.a f x₀ n * ‖subgradient_method.g f x₀ n‖ = s) (hs : s > 0) (k : ℕ)
   (heq :
@@ -1139,7 +1139,7 @@ theorem extracted_68 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
   (↑k + 1) * (s / ↑(subgradient_method.G f x₀)) > 0 := sorry
 
 
-theorem extracted_69 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_69 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   {s : ℝ} (ha' : ∀ (n : ℕ), subgradient_method.a f x₀ n * ‖subgradient_method.g f x₀ n‖ = s) (hs : s > 0) (k : ℕ)
   (heq :
@@ -1171,7 +1171,7 @@ theorem extracted_69 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
   2 * (↑k + 1) * (s / ↑(subgradient_method.G f x₀)) > 0 := sorry
 
 
-theorem extracted_70 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_70 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   {s : ℝ} (ha' : ∀ (n : ℕ), subgradient_method.a f x₀ n * ‖subgradient_method.g f x₀ n‖ = s) (hs : s > 0) (k : ℕ)
   (heq :
@@ -1206,7 +1206,7 @@ theorem extracted_70 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
     ‖x₀ - xm‖ ^ 2 - ‖subgradient_method.x f x₀ (k + 1) - xm‖ ^ 2 + (↑k + 1) * s ^ 2 := sorry
 
 
-theorem extracted_71 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_71 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   {s : ℝ} (ha' : ∀ (n : ℕ), subgradient_method.a f x₀ n * ‖subgradient_method.g f x₀ n‖ = s) (hs : s > 0) (k : ℕ)
   (heq :
@@ -1244,7 +1244,7 @@ theorem extracted_71 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
     sInf {x | ∃ i < k + 1, f (subgradient_method.x f x₀ i) = x} - f xm := sorry
 
 
-theorem extracted_72 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_72 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   {s : ℝ} (ha' : ∀ (n : ℕ), subgradient_method.a f x₀ n * ‖subgradient_method.g f x₀ n‖ = s) (hs : s > 0) (k : ℕ)
   (heq :
@@ -1283,7 +1283,7 @@ theorem extracted_72 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
       (2 * (↑k + 1) * (s / ↑(subgradient_method.G f x₀))) := sorry
 
 
-theorem extracted_73 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_73 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   {s : ℝ} (ha' : ∀ (n : ℕ), subgradient_method.a f x₀ n * ‖subgradient_method.g f x₀ n‖ = s) (hs : s > 0) (k : ℕ)
   (heq :
@@ -1322,7 +1322,7 @@ theorem extracted_73 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
     (‖x₀ - xm‖ ^ 2 + (↑k + 1) * s ^ 2) / (2 * (↑k + 1) * (s / ↑(subgradient_method.G f x₀))) := sorry
 
 
-theorem extracted_74 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_74 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   {s : ℝ} (ha' : ∀ (n : ℕ), subgradient_method.a f x₀ n * ‖subgradient_method.g f x₀ n‖ = s) (hs : s > 0) (k : ℕ)
   (heq :
@@ -1360,7 +1360,7 @@ theorem extracted_74 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
     ↑(subgradient_method.G f x₀) * ‖x₀ - xm‖ ^ 2 / (2 * (↑k + 1) * s) + ↑(subgradient_method.G f x₀) * s / 2 := sorry
 
 
-theorem extracted_75 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_75 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   (ha' : Tendsto (subgradient_method.a f x₀) atTop (𝓝 0))
   (ha'' : Tendsto (fun k => (Finset.range (k + 1)).sum (subgradient_method.a f x₀)) atTop atTop) :
@@ -1368,7 +1368,7 @@ theorem extracted_75 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
     (𝓝 (f xm)) := sorry
 
 
-theorem extracted_76 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_76 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   (ha' : Tendsto (subgradient_method.a f x₀) atTop (𝓝 0))
   (ha'' : Tendsto (fun k => (Finset.range (k + 1)).sum (subgradient_method.a f x₀)) atTop atTop) :
@@ -1376,7 +1376,7 @@ theorem extracted_76 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
     (𝓝 0) := sorry
 
 
-theorem extracted_77 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_77 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   (ha'' :
     ∀ (s : Set ℝ) (x : ℝ),
@@ -1393,7 +1393,7 @@ theorem extracted_77 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
     ∀ (b : ℕ), a₁ ≤ b → ‖x₀ - xm‖ ^ 2 / (2 * (Finset.range (b + 1)).sum (subgradient_method.a f x₀)) < ε / 2 := sorry
 
 
-theorem extracted_78 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_78 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   (ha'' :
     ∀ (s : Set ℝ) (x : ℝ),
@@ -1411,7 +1411,7 @@ theorem extracted_78 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
   ∀ (b : ℝ), A ≤ b → b ∈ s := sorry
 
 
-theorem extracted_79 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_79 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   (ha'' :
     ∀ (s : Set ℝ) (x : ℝ),
@@ -1436,7 +1436,7 @@ theorem extracted_79 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
                 2 * (Finset.range (b + 1)).sum (subgradient_method.a f x₀) > 0 := sorry
 
 
-theorem extracted_80 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_80 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   (ha'' :
     ∀ (s : Set ℝ) (x : ℝ),
@@ -1462,7 +1462,7 @@ theorem extracted_80 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
                   ‖x₀ - xm‖ ^ 2 < (Finset.range (b + 1)).sum (subgradient_method.a f x₀) * ε := sorry
 
 
-theorem extracted_81 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_81 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   (ha'' :
     ∀ (s : Set ℝ) (x : ℝ),
@@ -1489,7 +1489,7 @@ theorem extracted_81 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
                     2 * (Finset.range (b + 1)).sum (subgradient_method.a f x₀) * (ε / 2) := sorry
 
 
-theorem extracted_82 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_82 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   (ha'' :
     ∀ (s : Set ℝ) (x : ℝ),
@@ -1512,7 +1512,7 @@ theorem extracted_82 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
           ε / 2 := sorry
 
 
-theorem extracted_83 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_83 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   (ha'' :
     ∀ (s : Set ℝ) (x : ℝ),
@@ -1529,7 +1529,7 @@ theorem extracted_83 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
   (hG : ¬subgradient_method.G f x₀ = 0) : ↑(subgradient_method.G f x₀) ^ 2 > 0 := sorry
 
 
-theorem extracted_84 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_84 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   (ha'' :
     ∀ (s : Set ℝ) (x : ℝ),
@@ -1548,7 +1548,7 @@ theorem extracted_84 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
   ∀ x_1 ∈ s, x_1 ∈ s := sorry
 
 
-theorem extracted_85 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_85 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   (ha'' :
     ∀ (s : Set ℝ) (x : ℝ),
@@ -1567,7 +1567,7 @@ theorem extracted_85 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
   (∀ x_1 ∈ s, x_1 ∈ s) → ∀ x_1 ∈ s, ∃ ε, 0 < ε ∧ ∀ (x_2 : ℝ), dist x_2 x_1 < ε → x_2 ∈ s := sorry
 
 
-theorem extracted_86 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_86 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   (ha'' :
     ∀ (s : Set ℝ) (x : ℝ),
@@ -1586,7 +1586,7 @@ theorem extracted_86 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
   (hx₂ : dist x₂ x₁ < (ε / (2 * ↑(subgradient_method.G f x₀) ^ 2) - |x₁|) / 2) : |x₂| ≤ |x₁| + dist x₂ x₁ := sorry
 
 
-theorem extracted_87 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_87 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   (ha'' :
     ∀ (s : Set ℝ) (x : ℝ),
@@ -1606,7 +1606,7 @@ theorem extracted_87 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
   |x₁| + dist x₂ x₁ < |x₁| + (ε / (2 * ↑(subgradient_method.G f x₀) ^ 2) - |x₁|) / 2 := sorry
 
 
-theorem extracted_88 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_88 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   (ha'' :
     ∀ (s : Set ℝ) (x : ℝ),
@@ -1627,7 +1627,7 @@ theorem extracted_88 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
     (ε / (2 * ↑(subgradient_method.G f x₀) ^ 2) + |x₁|) / 2 := sorry
 
 
-theorem extracted_89 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_89 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   (ha'' :
     ∀ (s : Set ℝ) (x : ℝ),
@@ -1648,7 +1648,7 @@ theorem extracted_89 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
     (ε / (2 * ↑(subgradient_method.G f x₀) ^ 2) + ε / (2 * ↑(subgradient_method.G f x₀) ^ 2)) / 2 := sorry
 
 
-theorem extracted_90 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_90 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   (ha'' :
     ∀ (s : Set ℝ) (x : ℝ),
@@ -1669,7 +1669,7 @@ theorem extracted_90 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
     ε / (2 * ↑(subgradient_method.G f x₀) ^ 2) := sorry
 
 
-theorem extracted_91 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_91 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   (ha'' :
     ∀ (s : Set ℝ) (x : ℝ),
@@ -1688,7 +1688,7 @@ theorem extracted_91 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
   (∀ x_1 ∈ s, x_1 ∈ s) → (∀ x_1 ∈ s, ∃ ε, 0 < ε ∧ ∀ (x_2 : ℝ), dist x_2 x_1 < ε → x_2 ∈ s) → 0 ∈ s := sorry
 
 
-theorem extracted_92 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_92 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   (ha'' :
     ∀ (s : Set ℝ) (x : ℝ),
@@ -1711,7 +1711,7 @@ theorem extracted_92 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
   ∀ (b : ℝ), A ≤ b → b ∈ s₁ := sorry
 
 
-theorem extracted_93 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_93 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   (ha'' :
     ∀ (s : Set ℝ) (x : ℝ),
@@ -1737,7 +1737,7 @@ theorem extracted_93 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
         ∀ (b : ℕ), max a₁ (a₂ + 1) ≤ b → b ≥ a₁ := sorry
 
 
-theorem extracted_94 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_94 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   (ha'' :
     ∀ (s : Set ℝ) (x : ℝ),
@@ -1763,7 +1763,7 @@ theorem extracted_94 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
         ∀ (b : ℕ), max a₁ (a₂ + 1) ≤ b → b ≥ a₁ → b ≥ a₂ + 1 := sorry
 
 
-theorem extracted_95 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_95 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   (ha'' :
     ∀ (s : Set ℝ) (x : ℝ),
@@ -1789,7 +1789,7 @@ theorem extracted_95 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
         ∀ (b : ℕ), max a₁ (a₂ + 1) ≤ b → b ≥ a₁ → b ≥ a₂ + 1 → b ≥ a₂ := sorry
 
 
-theorem extracted_96 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_96 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   (ha'' :
     ∀ (s : Set ℝ) (x : ℝ),
@@ -1817,7 +1817,7 @@ theorem extracted_96 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
             b ≥ a₁ → b ≥ a₂ + 1 → b ≥ a₂ → 2 * (Finset.range (b + 1)).sum (subgradient_method.a f x₀) > 0 := sorry
 
 
-theorem extracted_97 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_97 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   (ha'' :
     ∀ (s : Set ℝ) (x : ℝ),
@@ -1849,7 +1849,7 @@ theorem extracted_97 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
                     (Finset.range (b + 1)).sum (subgradient_method.a f x₀) > 0 := sorry
 
 
-theorem extracted_98 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_98 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   (ha'' :
     ∀ (s : Set ℝ) (x : ℝ),
@@ -1882,7 +1882,7 @@ theorem extracted_98 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
                       ↑(subgradient_method.G f x₀) ^ 2 * (ε / (2 * ↑(subgradient_method.G f x₀) ^ 2)) > 0 := sorry
 
 
-theorem extracted_99 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_99 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   (ha'' :
     ∀ (s : Set ℝ) (x : ℝ),
@@ -1924,7 +1924,7 @@ theorem extracted_99 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
                               (2 * (Finset.range (b + 1)).sum (subgradient_method.a f x₀)) := sorry
 
 
-theorem extracted_100 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_100 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   (ha'' :
     ∀ (s : Set ℝ) (x : ℝ),
@@ -1961,7 +1961,7 @@ theorem extracted_100 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inn
                           b + 1 = a₂ + 1 + (b - a₂) := sorry
 
 
-theorem extracted_101 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_101 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   (ha'' :
     ∀ (s : Set ℝ) (x : ℝ),
@@ -2001,7 +2001,7 @@ theorem extracted_101 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inn
                           ε / 4 + ε / 4 := sorry
 
 
-theorem extracted_102 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_102 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   (ha'' :
     ∀ (s : Set ℝ) (x : ℝ),
@@ -2057,7 +2057,7 @@ theorem extracted_102 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inn
                                     4 := sorry
 
 
-theorem extracted_103 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_103 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   (ha'' :
     ∀ (s : Set ℝ) (x : ℝ),
@@ -2111,7 +2111,7 @@ theorem extracted_103 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inn
                                   ε / 4 := sorry
 
 
-theorem extracted_104 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_104 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   (ha'' :
     ∀ (s : Set ℝ) (x : ℝ),
@@ -2150,7 +2150,7 @@ theorem extracted_104 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inn
                                 subgradient_method.a f x₀ (a₂ + 1 + x) := sorry
 
 
-theorem extracted_105 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_105 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   (ha'' :
     ∀ (s : Set ℝ) (x : ℝ),
@@ -2184,7 +2184,7 @@ theorem extracted_105 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inn
                         ∀ i ∈ Finset.range (b - a₂), subgradient_method.a f x₀ (a₂ + 1 + i) > 0 := sorry
 
 
-theorem extracted_106 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_106 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   (ha'' :
     ∀ (s : Set ℝ) (x : ℝ),
@@ -2219,7 +2219,7 @@ theorem extracted_106 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inn
                           subgradient_method.a f x₀ (a₂ + 1 + i) > 0 → a₂ + 1 + i ≥ a₂ := sorry
 
 
-theorem extracted_107 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_107 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   (ha'' :
     ∀ (s : Set ℝ) (x : ℝ),
@@ -2257,7 +2257,7 @@ theorem extracted_107 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inn
                             ∑ x ∈ Finset.range (b - a₂), subgradient_method.a f x₀ (a₂ + 1 + x) := sorry
 
 
-theorem extracted_108 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_108 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   (ha'' :
     ∀ (s : Set ℝ) (x : ℝ),
@@ -2294,7 +2294,7 @@ theorem extracted_108 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inn
                             ∑ x ∈ Finset.range (b + 1), subgradient_method.a f x₀ x := sorry
 
 
-theorem extracted_109 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_109 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   (ha'' :
     ∀ (s : Set ℝ) (x : ℝ),
@@ -2331,7 +2331,7 @@ theorem extracted_109 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inn
                           b + 1 = a₂ + 1 + (b - a₂) := sorry
 
 
-theorem extracted_110 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_110 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   (ha'' :
     ∀ (s : Set ℝ) (x : ℝ),
@@ -2367,7 +2367,7 @@ theorem extracted_110 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inn
                           ε / 4 * (2 * (Finset.range (b + 1)).sum (subgradient_method.a f x₀)) := sorry
 
 
-theorem extracted_111 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_111 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   (ha'' :
     ∀ (s : Set ℝ) (x : ℝ),
@@ -2401,7 +2401,7 @@ theorem extracted_111 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inn
                         ε / 4 + ε / 4 = ε / 2 := sorry
 
 
-theorem extracted_112 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_112 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   (ha'' :
     ∀ (s : Set ℝ) (x : ℝ),
@@ -2425,7 +2425,7 @@ theorem extracted_112 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inn
   (b : ℕ) (hb : max a₁ a₂ ≤ b) : b ≥ a₁ := sorry
 
 
-theorem extracted_113 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_113 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   (ha'' :
     ∀ (s : Set ℝ) (x : ℝ),
@@ -2449,7 +2449,7 @@ theorem extracted_113 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inn
   (b : ℕ) (hb : max a₁ a₂ ≤ b) (hba₁ : b ≥ a₁) : b ≥ a₂ := sorry
 
 
-theorem extracted_114 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_114 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   (ha'' :
     ∀ (s : Set ℝ) (x : ℝ),
@@ -2474,7 +2474,7 @@ theorem extracted_114 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inn
   sInf {x | ∃ i < b + 1, f (subgradient_method.x f x₀ i) = x} - f xm ≥ 0 := sorry
 
 
-theorem extracted_115 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_115 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   (ha'' :
     ∀ (s : Set ℝ) (x : ℝ),
@@ -2500,7 +2500,7 @@ theorem extracted_115 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inn
     {x | ∃ i ∈ Finset.range (b + 1), f (subgradient_method.x f x₀ i) = x} := sorry
 
 
-theorem extracted_116 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_116 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   (ha'' :
     ∀ (s : Set ℝ) (x : ℝ),
@@ -2528,7 +2528,7 @@ theorem extracted_116 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inn
   Nonempty { x // x ∈ Finset.range (b + 1) } := sorry
 
 
-theorem extracted_117 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_117 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   (ha'' :
     ∀ (s : Set ℝ) (x : ℝ),
@@ -2557,7 +2557,7 @@ theorem extracted_117 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inn
       ↑(subgradient_method.G f x₀) ^ 2 * ∑ i ∈ Finset.range (k + 1), subgradient_method.a f x₀ i ^ 2 := sorry
 
 
-theorem extracted_118 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_118 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   (ha'' :
     ∀ (s : Set ℝ) (x : ℝ),
@@ -2597,7 +2597,7 @@ theorem extracted_118 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inn
   2 * (Finset.range (b + 1)).sum (subgradient_method.a f x₀) > 0 := sorry
 
 
-theorem extracted_119 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_119 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   (ha'' :
     ∀ (s : Set ℝ) (x : ℝ),
@@ -2640,7 +2640,7 @@ theorem extracted_119 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inn
       (2 * (Finset.range (b + 1)).sum (subgradient_method.a f x₀)) := sorry
 
 
-theorem extracted_120 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_120 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   (ha'' :
     ∀ (s : Set ℝ) (x : ℝ),
@@ -2685,7 +2685,7 @@ theorem extracted_120 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inn
         (2 * (Finset.range (b + 1)).sum (subgradient_method.a f x₀)) := sorry
 
 
-theorem extracted_121 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_121 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   (ha'' :
     ∀ (s : Set ℝ) (x : ℝ),
@@ -2729,7 +2729,7 @@ theorem extracted_121 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inn
     ε / 2 + ε / 2 := sorry
 
 
-theorem extracted_122 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem SubgradientMethod_extracted_122 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} (xm x₀ : E) (hm : IsMinOn f Set.univ xm) {alg : subgradient_method f x₀}
   (ha'' :
     ∀ (s : Set ℝ) (x : ℝ),

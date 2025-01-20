@@ -6,164 +6,164 @@ open Set Finset
 
 open InnerProductSpace Set
 
-theorem extracted_0 {E : Type u_1} {f : E → ℝ} {g : ℕ → E} (mono : ∀ (k : ℕ), f (g (k + 1)) ≤ f (g k)) (n : ℕ) :
+theorem GradientDescent_extracted_0 {E : Type u_1} {f : E → ℝ} {g : ℕ → E} (mono : ∀ (k : ℕ), f (g (k + 1)) ≤ f (g k)) (n : ℕ) :
   ∑ k ∈ Finset.range (n + 1), f (g (k + 1)) ≥ (↑n + 1) * f (g (n + 2)) := sorry
 
 
-theorem extracted_1 {E : Type u_1} {f : E → ℝ} {g : ℕ → E} (q : ℕ)
+theorem GradientDescent_extracted_1 {E : Type u_1} {f : E → ℝ} {g : ℕ → E} (q : ℕ)
   (IH1 : ∑ k ∈ Finset.range (q + 1), f (g (k + 1)) ≥ (↑q + 1) * f (g (q + 2)))
   (mono : f (g (q + 2 + 1)) ≤ f (g (q + 2))) :
   ∑ k ∈ Finset.range (q.succ + 1), f (g (k + 1)) = ∑ k ∈ Finset.range (q + 1), f (g (k + 1)) + f (g (q + 2)) := sorry
 
 
-theorem extracted_2 {E : Type u_1} {f : E → ℝ} {g : ℕ → E} (q : ℕ)
+theorem GradientDescent_extracted_2 {E : Type u_1} {f : E → ℝ} {g : ℕ → E} (q : ℕ)
   (IH1 : ∑ k ∈ Finset.range (q + 1), f (g (k + 1)) ≥ (↑q + 1) * f (g (q + 2)))
   (mono : f (g (q + 2 + 1)) ≤ f (g (q + 2))) :
   ∑ k ∈ Finset.range (q + 1), f (g (k + 1)) + f (g (q + 2)) ≥ (↑q + 1) * f (g (q + 2)) + f (g (q + 2)) := sorry
 
 
-theorem extracted_3 {E : Type u_1} {f : E → ℝ} {g : ℕ → E} (q : ℕ)
+theorem GradientDescent_extracted_3 {E : Type u_1} {f : E → ℝ} {g : ℕ → E} (q : ℕ)
   (IH1 : ∑ k ∈ Finset.range (q + 1), f (g (k + 1)) ≥ (↑q + 1) * f (g (q + 2)))
   (mono : f (g (q + 2 + 1)) ≤ f (g (q + 2))) :
   (↑q + 1) * f (g (q + 2)) + f (g (q + 2)) = (↑q + 2) * f (g (q + 2)) := sorry
 
 
-theorem extracted_4 {E : Type u_1} {f : E → ℝ} {g : ℕ → E} (q : ℕ)
+theorem GradientDescent_extracted_4 {E : Type u_1} {f : E → ℝ} {g : ℕ → E} (q : ℕ)
   (IH1 : ∑ k ∈ Finset.range (q + 1), f (g (k + 1)) ≥ (↑q + 1) * f (g (q + 2)))
   (mono : f (g (q + 2 + 1)) ≤ f (g (q + 2))) : 0 ≤ ↑q + 2 := sorry
 
 
-theorem extracted_5 {E : Type u_1} {f : E → ℝ} {g : ℕ → E} (q : ℕ)
+theorem GradientDescent_extracted_5 {E : Type u_1} {f : E → ℝ} {g : ℕ → E} (q : ℕ)
   (IH1 : ∑ k ∈ Finset.range (q + 1), f (g (k + 1)) ≥ (↑q + 1) * f (g (q + 2)))
   (mono : f (g (q + 2 + 1)) ≤ f (g (q + 2))) : (↑q + 2) * f (g (q + 3)) = (↑q.succ + 1) * f (g (q.succ + 2)) := sorry
 
 
-theorem extracted_6 {E : Type u_1} {f : E → ℝ} {g : ℕ → E} (mono : ∀ (k : ℕ), f (g (k + 1)) ≤ f (g k)) (n : ℕ) :
+theorem GradientDescent_extracted_6 {E : Type u_1} {f : E → ℝ} {g : ℕ → E} (mono : ∀ (k : ℕ), f (g (k + 1)) ≤ f (g k)) (n : ℕ) :
   (∑ k ∈ Finset.range (n.succ + 1), f (g (k + 1))) / (↑n.succ + 1) ≥ f (g (n + 2)) := sorry
 
 
-theorem extracted_7 (n : ℕ) : 0 ≤ ↑n + 1 + 1 := sorry
+theorem GradientDescent_extracted_7 (n : ℕ) : 0 ≤ ↑n + 1 + 1 := sorry
 
 
-theorem extracted_8 {E : Type u_1} {f : E → ℝ} {g : ℕ → E} (mono : ∀ (k : ℕ), f (g (k + 1)) ≤ f (g k)) (n : ℕ)
+theorem GradientDescent_extracted_8 {E : Type u_1} {f : E → ℝ} {g : ℕ → E} (mono : ∀ (k : ℕ), f (g (k + 1)) ≤ f (g k)) (n : ℕ)
   (h : (↑n + 1) * f (g (n.succ + 1)) / (↑n + 1 + 1) ≤ (∑ k ∈ Finset.range n.succ, f (g (k + 1))) / (↑n + 1 + 1)) :
   (∑ k ∈ Finset.range (n.succ + 1), f (g (k + 1))) / (↑n.succ + 1) =
     (∑ k ∈ Finset.range n.succ, f (g (k + 1))) / (↑n.succ + 1) + f (g (n.succ + 1)) / (↑n.succ + 1) := sorry
 
 
-theorem extracted_9 {E : Type u_1} {f : E → ℝ} {g : ℕ → E} (mono : ∀ (k : ℕ), f (g (k + 1)) ≤ f (g k)) (n : ℕ)
+theorem GradientDescent_extracted_9 {E : Type u_1} {f : E → ℝ} {g : ℕ → E} (mono : ∀ (k : ℕ), f (g (k + 1)) ≤ f (g k)) (n : ℕ)
   (h : (↑n + 1) * f (g (n.succ + 1)) / (↑n + 1 + 1) ≤ (∑ k ∈ Finset.range n.succ, f (g (k + 1))) / (↑n + 1 + 1)) :
   (∑ k ∈ Finset.range n.succ, f (g (k + 1))) / (↑n.succ + 1) + f (g (n.succ + 1)) / (↑n.succ + 1) ≥
     ↑n.succ * f (g (n.succ + 1)) / (↑n.succ + 1) + f (g (n.succ + 1)) / (↑n.succ + 1) := sorry
 
 
-theorem extracted_10 {E : Type u_1} {f : E → ℝ} {g : ℕ → E} (mono : ∀ (k : ℕ), f (g (k + 1)) ≤ f (g k)) (n : ℕ)
+theorem GradientDescent_extracted_10 {E : Type u_1} {f : E → ℝ} {g : ℕ → E} (mono : ∀ (k : ℕ), f (g (k + 1)) ≤ f (g k)) (n : ℕ)
   (h : (↑n + 1) * f (g (n.succ + 1)) / (↑n + 1 + 1) ≤ (∑ k ∈ Finset.range n.succ, f (g (k + 1))) / (↑n + 1 + 1)) :
   ↑n.succ * f (g (n.succ + 1)) / (↑n.succ + 1) + f (g (n.succ + 1)) / (↑n.succ + 1) = f (g (n + 2)) := sorry
 
 
-theorem extracted_11 {E : Type u_1} {xm : E} {f : E → ℝ} {g : ℕ → E} (mono : ∀ (k : ℕ), f (g (k + 1)) ≤ f (g k))
+theorem GradientDescent_extracted_11 {E : Type u_1} {xm : E} {f : E → ℝ} {g : ℕ → E} (mono : ∀ (k : ℕ), f (g (k + 1)) ≤ f (g k))
   (n : ℕ) : f (g (n + 1)) - f xm ≤ (∑ k ∈ Finset.range (n + 1), (f (g (k + 1)) - f xm)) / (↑n + 1) := sorry
 
 
-theorem extracted_12 {E : Type u_1} {xm : E} {f : E → ℝ} {g : ℕ → E} (mono : ∀ (k : ℕ), f (g (k + 1)) ≤ f (g k))
+theorem GradientDescent_extracted_12 {E : Type u_1} {xm : E} {f : E → ℝ} {g : ℕ → E} (mono : ∀ (k : ℕ), f (g (k + 1)) ≤ f (g k))
   (j : ℕ) (a : f (g (j + 1)) - f xm ≤ (∑ k ∈ Finset.range (j + 1), (f (g (k + 1)) - f xm)) / (↑j + 1)) :
   f (g (j + 2)) ≤ (∑ k ∈ Finset.range (j.succ + 1), f (g (k + 1))) / (↑j.succ + 1) := sorry
 
 
-theorem extracted_13 {E : Type u_1} {xm : E} {f : E → ℝ} {g : ℕ → E} (mono : ∀ (k : ℕ), f (g (k + 1)) ≤ f (g k))
+theorem GradientDescent_extracted_13 {E : Type u_1} {xm : E} {f : E → ℝ} {g : ℕ → E} (mono : ∀ (k : ℕ), f (g (k + 1)) ≤ f (g k))
   (j : ℕ) (a : f (g (j + 1)) - f xm ≤ (∑ k ∈ Finset.range (j + 1), (f (g (k + 1)) - f xm)) / (↑j + 1)) :
   (∑ k ∈ Finset.range (j.succ + 1), f (g (k + 1))) / (↑j.succ + 1) =
     (∑ k ∈ Finset.range (j.succ + 1), f (g (k + 1))) / (↑j + 2) - f xm * 1 + f xm := sorry
 
 
-theorem extracted_14 {E : Type u_1} {xm : E} {f : E → ℝ} {g : ℕ → E} (mono : ∀ (k : ℕ), f (g (k + 1)) ≤ f (g k))
+theorem GradientDescent_extracted_14 {E : Type u_1} {xm : E} {f : E → ℝ} {g : ℕ → E} (mono : ∀ (k : ℕ), f (g (k + 1)) ≤ f (g k))
   (j : ℕ) (a : f (g (j + 1)) - f xm ≤ (∑ k ∈ Finset.range (j + 1), (f (g (k + 1)) - f xm)) / (↑j + 1)) :
   (∑ k ∈ Finset.range (j.succ + 1), f (g (k + 1))) / (↑j + 2) - f xm * 1 + f xm =
     (∑ k ∈ Finset.range (j.succ + 1), f (g (k + 1))) / (↑j + 2) - f xm * ((↑j + 2) / (↑j + 2)) + f xm := sorry
 
 
-theorem extracted_15 {E : Type u_1} {xm : E} {f : E → ℝ} {g : ℕ → E} (mono : ∀ (k : ℕ), f (g (k + 1)) ≤ f (g k))
+theorem GradientDescent_extracted_15 {E : Type u_1} {xm : E} {f : E → ℝ} {g : ℕ → E} (mono : ∀ (k : ℕ), f (g (k + 1)) ≤ f (g k))
   (j : ℕ) (a : f (g (j + 1)) - f xm ≤ (∑ k ∈ Finset.range (j + 1), (f (g (k + 1)) - f xm)) / (↑j + 1)) :
   (∑ k ∈ Finset.range (j.succ + 1), f (g (k + 1))) / (↑j + 2) - f xm * ((↑j + 2) / (↑j + 2)) + f xm =
     (∑ k ∈ Finset.range (j.succ + 1), f (g (k + 1)) - (↑j + 1 + 1) * f xm) / (↑j + 1 + 1) + f xm := sorry
 
 
-theorem extracted_16 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem GradientDescent_extracted_16 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {x₀ : E} [p : Gradient_Descent_fix_stepsize f f' x₀] (k : ℕ) :
   (fun x => Gradient_Descent_fix_stepsize.a f f' x₀) k > 0 := sorry
 
 
-theorem extracted_17 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem GradientDescent_extracted_17 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} (h₁ : ∀ (x₁ : E), HasGradientAt f (f' x₁) x₁)
   (hfun : ConvexOn ℝ univ f) (x y : E) : f x ≤ f y + ⟪f' x, x - y⟫_ℝ := sorry
 
 
-theorem extracted_18 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem GradientDescent_extracted_18 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} (h₁ : ∀ (x₁ : E), HasGradientAt f (f' x₁) x₁)
   (hfun : ConvexOn ℝ univ f) (x : E) : x ∈ univ := sorry
 
 
-theorem extracted_19 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem GradientDescent_extracted_19 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} (h₁ : ∀ (x₁ : E), HasGradientAt f (f' x₁) x₁)
   (hfun : ConvexOn ℝ univ f) (y : E) : y ∈ univ := sorry
 
 
-theorem extracted_20 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem GradientDescent_extracted_20 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {l : NNReal} {a : ℝ} (h₁ : ∀ (x₁ : E), HasGradientAt f (f' x₁) x₁)
   (h₂ : ↑l > 0) (ha₁ : ↑l ≤ 1 / a) (ha₂ : a > 0) (h₃ : LipschitzWith l f') (x : E) :
   f (x - a • f' x) ≤ f x - a / 2 * ‖f' x‖ ^ 2 := sorry
 
 
-theorem extracted_21 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem GradientDescent_extracted_21 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {l : NNReal} {a : ℝ} (h₁ : ∀ (x₁ : E), HasGradientAt f (f' x₁) x₁)
   (h₂ : ↑l > 0) (ha₁ : ↑l ≤ 1 / a) (ha₂ : a > 0) (h₃ : LipschitzWith l f') (x : E) :
   f x + ⟪f' x, x - a • f' x - x⟫_ℝ + ↑l / 2 * ‖x - a • f' x - x‖ ^ 2 = f x + (↑l / 2 * a * a - a) * ‖f' x‖ ^ 2 := sorry
 
 
-theorem extracted_22 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem GradientDescent_extracted_22 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {l : NNReal} {a : ℝ} (h₁ : ∀ (x₁ : E), HasGradientAt f (f' x₁) x₁)
   (h₂ : ↑l > 0) (ha₁ : ↑l ≤ 1 / a) (ha₂ : a > 0) (h₃ : LipschitzWith l f') (x : E) :
   f x + (↑l / 2 * a * a - a) * ‖f' x‖ ^ 2 ≤ f x + -a / 2 * ‖f' x‖ ^ 2 := sorry
 
 
-theorem extracted_23 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem GradientDescent_extracted_23 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {l : NNReal} {a : ℝ} (h₁ : ∀ (x₁ : E), HasGradientAt f (f' x₁) x₁)
   (h₂ : ↑l > 0) (ha₁ : ↑l ≤ 1 / a) (ha₂ : a > 0) (h₃ : LipschitzWith l f') : ↑l / 2 * a * a = ↑l * a * (a / 2) := sorry
 
 
-theorem extracted_24 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem GradientDescent_extracted_24 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {l : NNReal} {a : ℝ} (h₁ : ∀ (x₁ : E), HasGradientAt f (f' x₁) x₁)
   (h₂ : ↑l > 0) (ha₁ : ↑l ≤ 1 / a) (ha₂ : a > 0) (h₃ : LipschitzWith l f') : ↑l * a * (a / 2) ≤ 1 * (a / 2) := sorry
 
 
-theorem extracted_25 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem GradientDescent_extracted_25 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {l : NNReal} {a : ℝ} (h₁ : ∀ (x₁ : E), HasGradientAt f (f' x₁) x₁)
   (h₂ : ↑l > 0) (ha₁ : ↑l ≤ 1 / a) (ha₂ : a > 0) (h₃ : LipschitzWith l f') : a / 2 ≤ a / 2 := sorry
 
 
-theorem extracted_26 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem GradientDescent_extracted_26 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {l : NNReal} {a : ℝ} (h₁ : ∀ (x₁ : E), HasGradientAt f (f' x₁) x₁)
   (h₂ : ↑l > 0) (ha₁ : ↑l ≤ 1 / a) (ha₂ : a > 0) (h₃ : LipschitzWith l f') : 0 ≤ ↑l * a := sorry
 
 
-theorem extracted_27 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem GradientDescent_extracted_27 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {l : NNReal} {a : ℝ} (h₁ : ∀ (x₁ : E), HasGradientAt f (f' x₁) x₁)
   (h₂ : ↑l > 0) (ha₁ : ↑l ≤ 1 / a) (ha₂ : a > 0) (h₃ : LipschitzWith l f') : 0 ≤ a / 2 := sorry
 
 
-theorem extracted_28 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem GradientDescent_extracted_28 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {l : NNReal} {a : ℝ} (h₁ : ∀ (x₁ : E), HasGradientAt f (f' x₁) x₁)
   (h₂ : ↑l > 0) (ha₁ : ↑l ≤ 1 / a) (ha₂ : a > 0) (h₃ : LipschitzWith l f') : 1 * (a / 2) = -a / 2 + a := sorry
 
 
-theorem extracted_29 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem GradientDescent_extracted_29 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {l : NNReal} {a : ℝ} (h₁ : ∀ (x₁ : E), HasGradientAt f (f' x₁) x₁)
   (h₂ : ↑l > 0) (ha₁ : ↑l ≤ 1 / a) (ha₂ : a > 0) (h₃ : LipschitzWith l f') (x : E) :
   f x + -a / 2 * ‖f' x‖ ^ 2 = f x - a / 2 * ‖f' x‖ ^ 2 := sorry
 
 
-theorem extracted_30 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem GradientDescent_extracted_30 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {alg : Gradient_Descent_fix_stepsize f f' x₀}
   (hfun : ConvexOn ℝ univ f)
   (step₂ : Gradient_Descent_fix_stepsize.a f f' x₀ ≤ 1 / ↑(Gradient_Descent_fix_stepsize.l f f' x₀)) (k : ℕ) :
@@ -174,14 +174,14 @@ theorem extracted_30 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
           ‖Gradient_Descent_fix_stepsize.x f f' x₀ (k + 1) - xm‖ ^ 2) := sorry
 
 
-theorem extracted_31 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem GradientDescent_extracted_31 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {alg : Gradient_Descent_fix_stepsize f f' x₀}
   (hfun : ConvexOn ℝ univ f)
   (step₂ : Gradient_Descent_fix_stepsize.a f f' x₀ ≤ 1 / ↑(Gradient_Descent_fix_stepsize.l f f' x₀)) :
   ↑(Gradient_Descent_fix_stepsize.l f f' x₀) ≤ 1 / Gradient_Descent_fix_stepsize.a f f' x₀ := sorry
 
 
-theorem extracted_32 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem GradientDescent_extracted_32 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {alg : Gradient_Descent_fix_stepsize f f' x₀}
   (hfun : ConvexOn ℝ univ f)
   (step₂_1 : Gradient_Descent_fix_stepsize.a f f' x₀ ≤ 1 / ↑(Gradient_Descent_fix_stepsize.l f f' x₀))
@@ -194,7 +194,7 @@ theorem extracted_32 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
         (‖x - xm‖ ^ 2 - ‖x - Gradient_Descent_fix_stepsize.a f f' x₀ • f' x - xm‖ ^ 2) := sorry
 
 
-theorem extracted_33 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem GradientDescent_extracted_33 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {alg : Gradient_Descent_fix_stepsize f f' x₀}
   (hfun : ConvexOn ℝ univ f)
   (step₂_1 : Gradient_Descent_fix_stepsize.a f f' x₀ ≤ 1 / ↑(Gradient_Descent_fix_stepsize.l f f' x₀))
@@ -204,7 +204,7 @@ theorem extracted_33 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
   1 / (2 * Gradient_Descent_fix_stepsize.a f f' x₀) * (2 * Gradient_Descent_fix_stepsize.a f f' x₀) = 1 := sorry
 
 
-theorem extracted_34 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem GradientDescent_extracted_34 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {alg : Gradient_Descent_fix_stepsize f f' x₀}
   (hfun : ConvexOn ℝ univ f)
   (step₂_1 : Gradient_Descent_fix_stepsize.a f f' x₀ ≤ 1 / ↑(Gradient_Descent_fix_stepsize.l f f' x₀))
@@ -213,7 +213,7 @@ theorem extracted_34 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
   (this : Gradient_Descent_fix_stepsize.l f f' x₀ > 0) : Gradient_Descent_fix_stepsize.a f f' x₀ ≠ 0 := sorry
 
 
-theorem extracted_35 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem GradientDescent_extracted_35 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {alg : Gradient_Descent_fix_stepsize f f' x₀}
   (hfun : ConvexOn ℝ univ f)
   (step₂_1 : Gradient_Descent_fix_stepsize.a f f' x₀ ≤ 1 / ↑(Gradient_Descent_fix_stepsize.l f f' x₀))
@@ -226,7 +226,7 @@ theorem extracted_35 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
       (‖x - xm‖ ^ 2 - ‖x - Gradient_Descent_fix_stepsize.a f f' x₀ • f' x - xm‖ ^ 2) := sorry
 
 
-theorem extracted_36 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem GradientDescent_extracted_36 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {alg : Gradient_Descent_fix_stepsize f f' x₀}
   (hfun : ConvexOn ℝ univ f)
   (step₂_1 : Gradient_Descent_fix_stepsize.a f f' x₀ ≤ 1 / ↑(Gradient_Descent_fix_stepsize.l f f' x₀))
@@ -239,7 +239,7 @@ theorem extracted_36 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
       ‖Gradient_Descent_fix_stepsize.a f f' x₀ • f' x‖ ^ 2 := sorry
 
 
-theorem extracted_37 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem GradientDescent_extracted_37 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {alg : Gradient_Descent_fix_stepsize f f' x₀}
   (hfun : ConvexOn ℝ univ f)
   (step₂_1 : Gradient_Descent_fix_stepsize.a f f' x₀ ≤ 1 / ↑(Gradient_Descent_fix_stepsize.l f f' x₀))
@@ -258,7 +258,7 @@ theorem extracted_37 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
       1 / (2 * Gradient_Descent_fix_stepsize.a f f' x₀) * -‖Gradient_Descent_fix_stepsize.a f f' x₀ • f' x‖ ^ 2 := sorry
 
 
-theorem extracted_38 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem GradientDescent_extracted_38 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {alg : Gradient_Descent_fix_stepsize f f' x₀}
   (hfun : ConvexOn ℝ univ f)
   (step₂_1 : Gradient_Descent_fix_stepsize.a f f' x₀ ≤ 1 / ↑(Gradient_Descent_fix_stepsize.l f f' x₀))
@@ -276,7 +276,7 @@ theorem extracted_38 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
       1 / (2 * Gradient_Descent_fix_stepsize.a f f' x₀) * -‖Gradient_Descent_fix_stepsize.a f f' x₀ • f' x‖ ^ 2 := sorry
 
 
-theorem extracted_39 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem GradientDescent_extracted_39 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {alg : Gradient_Descent_fix_stepsize f f' x₀}
   (hfun : ConvexOn ℝ univ f)
   (step₂_1 : Gradient_Descent_fix_stepsize.a f f' x₀ ≤ 1 / ↑(Gradient_Descent_fix_stepsize.l f f' x₀))
@@ -296,7 +296,7 @@ theorem extracted_39 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
         ‖f' x‖ ^ 2 := sorry
 
 
-theorem extracted_40 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem GradientDescent_extracted_40 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {alg : Gradient_Descent_fix_stepsize f f' x₀}
   (hfun : ConvexOn ℝ univ f)
   (step₂_1 : Gradient_Descent_fix_stepsize.a f f' x₀ ≤ 1 / ↑(Gradient_Descent_fix_stepsize.l f f' x₀))
@@ -315,7 +315,7 @@ theorem extracted_40 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
     ⟪f' x, x - xm⟫_ℝ - Gradient_Descent_fix_stepsize.a f f' x₀ / 2 * ‖f' x‖ ^ 2 := sorry
 
 
-theorem extracted_41 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem GradientDescent_extracted_41 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {alg : Gradient_Descent_fix_stepsize f f' x₀}
   (hfun : ConvexOn ℝ univ f)
   (step₂_1 : Gradient_Descent_fix_stepsize.a f f' x₀ ≤ 1 / ↑(Gradient_Descent_fix_stepsize.l f f' x₀))
@@ -331,7 +331,7 @@ theorem extracted_41 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
     f x - Gradient_Descent_fix_stepsize.a f f' x₀ / 2 * ‖f' x‖ ^ 2 := sorry
 
 
-theorem extracted_42 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem GradientDescent_extracted_42 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {alg : Gradient_Descent_fix_stepsize f f' x₀}
   (hfun : ConvexOn ℝ univ f)
   (step₂_1 : Gradient_Descent_fix_stepsize.a f f' x₀ ≤ 1 / ↑(Gradient_Descent_fix_stepsize.l f f' x₀))
@@ -347,7 +347,7 @@ theorem extracted_42 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
     f xm + ⟪f' x, x - xm⟫_ℝ - Gradient_Descent_fix_stepsize.a f f' x₀ / 2 * ‖f' x‖ ^ 2 := sorry
 
 
-theorem extracted_43 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem GradientDescent_extracted_43 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {alg : Gradient_Descent_fix_stepsize f f' x₀}
   (hfun : ConvexOn ℝ univ f)
   (step₂_1 : Gradient_Descent_fix_stepsize.a f f' x₀ ≤ 1 / ↑(Gradient_Descent_fix_stepsize.l f f' x₀))
@@ -365,7 +365,7 @@ theorem extracted_43 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
         (‖x - xm‖ ^ 2 - ‖x - Gradient_Descent_fix_stepsize.a f f' x₀ • f' x - xm‖ ^ 2) := sorry
 
 
-theorem extracted_44 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem GradientDescent_extracted_44 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {alg : Gradient_Descent_fix_stepsize f f' x₀}
   (hfun : ConvexOn ℝ univ f)
   (step₂ : Gradient_Descent_fix_stepsize.a f f' x₀ ≤ 1 / ↑(Gradient_Descent_fix_stepsize.l f f' x₀)) (k : ℕ) :
@@ -373,14 +373,14 @@ theorem extracted_44 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
     1 / (2 * (↑k + 1) * Gradient_Descent_fix_stepsize.a f f' x₀) * ‖x₀ - xm‖ ^ 2 := sorry
 
 
-theorem extracted_45 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem GradientDescent_extracted_45 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {alg : Gradient_Descent_fix_stepsize f f' x₀}
   (hfun : ConvexOn ℝ univ f)
   (step₂ : Gradient_Descent_fix_stepsize.a f f' x₀ ≤ 1 / ↑(Gradient_Descent_fix_stepsize.l f f' x₀)) :
   ↑(Gradient_Descent_fix_stepsize.l f f' x₀) ≤ 1 / Gradient_Descent_fix_stepsize.a f f' x₀ := sorry
 
 
-theorem extracted_46 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem GradientDescent_extracted_46 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {alg : Gradient_Descent_fix_stepsize f f' x₀}
   (hfun : ConvexOn ℝ univ f)
   (step₂ : Gradient_Descent_fix_stepsize.a f f' x₀ ≤ 1 / ↑(Gradient_Descent_fix_stepsize.l f f' x₀)) (k : ℕ)
@@ -390,7 +390,7 @@ theorem extracted_46 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
   1 / (2 * (↑k + 1) * Gradient_Descent_fix_stepsize.a f f' x₀) > 0 := sorry
 
 
-theorem extracted_47 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem GradientDescent_extracted_47 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {alg : Gradient_Descent_fix_stepsize f f' x₀}
   (hfun : ConvexOn ℝ univ f)
   (step₂ : Gradient_Descent_fix_stepsize.a f f' x₀ ≤ 1 / ↑(Gradient_Descent_fix_stepsize.l f f' x₀)) (k : ℕ)
@@ -409,7 +409,7 @@ theorem extracted_47 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
     f (Gradient_Descent_fix_stepsize.x f f' x₀ (k + 1)) ≤ f (Gradient_Descent_fix_stepsize.x f f' x₀ k) := sorry
 
 
-theorem extracted_48 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem GradientDescent_extracted_48 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {alg : Gradient_Descent_fix_stepsize f f' x₀}
   (hfun : ConvexOn ℝ univ f)
   (step₂ : Gradient_Descent_fix_stepsize.a f f' x₀ ≤ 1 / ↑(Gradient_Descent_fix_stepsize.l f f' x₀)) (k_1 : ℕ)
@@ -430,7 +430,7 @@ theorem extracted_48 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
     f (Gradient_Descent_fix_stepsize.x f f' x₀ k) := sorry
 
 
-theorem extracted_49 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem GradientDescent_extracted_49 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {alg : Gradient_Descent_fix_stepsize f f' x₀}
   (hfun : ConvexOn ℝ univ f)
   (step₂ : Gradient_Descent_fix_stepsize.a f f' x₀ ≤ 1 / ↑(Gradient_Descent_fix_stepsize.l f f' x₀)) (k : ℕ)
@@ -448,7 +448,7 @@ theorem extracted_49 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
   0 ≤ Gradient_Descent_fix_stepsize.a f f' x₀ / 2 := sorry
 
 
-theorem extracted_50 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem GradientDescent_extracted_50 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {alg : Gradient_Descent_fix_stepsize f f' x₀}
   (hfun : ConvexOn ℝ univ f)
   (step₂ : Gradient_Descent_fix_stepsize.a f f' x₀ ≤ 1 / ↑(Gradient_Descent_fix_stepsize.l f f' x₀)) (k : ℕ)
@@ -471,7 +471,7 @@ theorem extracted_50 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
       (‖x₀ - xm‖ ^ 2 - ‖Gradient_Descent_fix_stepsize.x f f' x₀ (n + 1) - xm‖ ^ 2) := sorry
 
 
-theorem extracted_51 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem GradientDescent_extracted_51 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {alg : Gradient_Descent_fix_stepsize f f' x₀}
   (hfun : ConvexOn ℝ univ f)
   (step₂ : Gradient_Descent_fix_stepsize.a f f' x₀ ≤ 1 / ↑(Gradient_Descent_fix_stepsize.l f f' x₀)) (k : ℕ)
@@ -496,7 +496,7 @@ theorem extracted_51 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
       f xm := sorry
 
 
-theorem extracted_52 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem GradientDescent_extracted_52 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {alg : Gradient_Descent_fix_stepsize f f' x₀}
   (hfun : ConvexOn ℝ univ f)
   (step₂ : Gradient_Descent_fix_stepsize.a f f' x₀ ≤ 1 / ↑(Gradient_Descent_fix_stepsize.l f f' x₀)) (k : ℕ)
@@ -523,7 +523,7 @@ theorem extracted_52 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
       f xm := sorry
 
 
-theorem extracted_53 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem GradientDescent_extracted_53 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {alg : Gradient_Descent_fix_stepsize f f' x₀}
   (hfun : ConvexOn ℝ univ f)
   (step₂ : Gradient_Descent_fix_stepsize.a f f' x₀ ≤ 1 / ↑(Gradient_Descent_fix_stepsize.l f f' x₀)) (k : ℕ)
@@ -553,7 +553,7 @@ theorem extracted_53 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
       f xm := sorry
 
 
-theorem extracted_54 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem GradientDescent_extracted_54 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {alg : Gradient_Descent_fix_stepsize f f' x₀}
   (hfun : ConvexOn ℝ univ f)
   (step₂ : Gradient_Descent_fix_stepsize.a f f' x₀ ≤ 1 / ↑(Gradient_Descent_fix_stepsize.l f f' x₀)) (k : ℕ)
@@ -585,7 +585,7 @@ theorem extracted_54 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
           ‖Gradient_Descent_fix_stepsize.x f f' x₀ (j + 2) - xm‖ ^ 2) := sorry
 
 
-theorem extracted_55 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem GradientDescent_extracted_55 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {alg : Gradient_Descent_fix_stepsize f f' x₀}
   (hfun : ConvexOn ℝ univ f)
   (step₂ : Gradient_Descent_fix_stepsize.a f f' x₀ ≤ 1 / ↑(Gradient_Descent_fix_stepsize.l f f' x₀)) (k : ℕ)
@@ -615,7 +615,7 @@ theorem extracted_55 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
       (‖x₀ - xm‖ ^ 2 - ‖Gradient_Descent_fix_stepsize.x f f' x₀ (j.succ + 1) - xm‖ ^ 2) := sorry
 
 
-theorem extracted_56 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem GradientDescent_extracted_56 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {alg : Gradient_Descent_fix_stepsize f f' x₀}
   (hfun : ConvexOn ℝ univ f)
   (step₂ : Gradient_Descent_fix_stepsize.a f f' x₀ ≤ 1 / ↑(Gradient_Descent_fix_stepsize.l f f' x₀)) (k : ℕ)
@@ -644,7 +644,7 @@ theorem extracted_56 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
       (‖x₀ - xm‖ ^ 2 - ‖Gradient_Descent_fix_stepsize.x f f' x₀ (k + 1) - xm‖ ^ 2) := sorry
 
 
-theorem extracted_57 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem GradientDescent_extracted_57 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {alg : Gradient_Descent_fix_stepsize f f' x₀}
   (hfun : ConvexOn ℝ univ f)
   (step₂ : Gradient_Descent_fix_stepsize.a f f' x₀ ≤ 1 / ↑(Gradient_Descent_fix_stepsize.l f f' x₀)) (k : ℕ)
@@ -671,7 +671,7 @@ theorem extracted_57 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
   0 ≤ ↑k + 1 := sorry
 
 
-theorem extracted_58 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem GradientDescent_extracted_58 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {alg : Gradient_Descent_fix_stepsize f f' x₀}
   (hfun : ConvexOn ℝ univ f)
   (step₂ : Gradient_Descent_fix_stepsize.a f f' x₀ ≤ 1 / ↑(Gradient_Descent_fix_stepsize.l f f' x₀)) (k : ℕ)
@@ -703,7 +703,7 @@ theorem extracted_58 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
       (‖x₀ - xm‖ ^ 2 - ‖Gradient_Descent_fix_stepsize.x f f' x₀ (k + 1) - xm‖ ^ 2) := sorry
 
 
-theorem extracted_59 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem GradientDescent_extracted_59 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {alg : Gradient_Descent_fix_stepsize f f' x₀}
   (hfun : ConvexOn ℝ univ f)
   (step₂ : Gradient_Descent_fix_stepsize.a f f' x₀ ≤ 1 / ↑(Gradient_Descent_fix_stepsize.l f f' x₀)) (k : ℕ)
@@ -734,7 +734,7 @@ theorem extracted_59 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
   ‖x₀ - xm‖ ^ 2 - ‖Gradient_Descent_fix_stepsize.x f f' x₀ (k + 1) - xm‖ ^ 2 ≤ ‖x₀ - xm‖ ^ 2 := sorry
 
 
-theorem extracted_60 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem GradientDescent_extracted_60 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {alg : Gradient_Descent_fix_stepsize f f' x₀}
   (hfun : ConvexOn ℝ univ f)
   (step₂ : Gradient_Descent_fix_stepsize.a f f' x₀ ≤ 1 / ↑(Gradient_Descent_fix_stepsize.l f f' x₀)) (k : ℕ)

@@ -4,7 +4,7 @@ import Convex
 
 open Set
 
-theorem extracted_0 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem NesterovSmooth_extracted_0 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {γ : ℕ+ → ℝ} {alg : Nesterov f f' γ x₀}
   (hfun : ConvexOn ℝ univ f) (hg : ∀ (k : ℕ+), γ k = 2 / (↑↑k + 1)) (k : ℕ+) :
   f (Nesterov.x f f' γ x₀ ↑k) - f xm - (1 - γ k) * (f (Nesterov.x f f' γ x₀ (↑k - 1)) - f xm) ≤
@@ -12,7 +12,7 @@ theorem extracted_0 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inner
       (‖Nesterov.v f f' γ x₀ (↑k - 1) - xm‖ ^ 2 - ‖Nesterov.v f f' γ x₀ ↑k - xm‖ ^ 2) := sorry
 
 
-theorem extracted_1 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem NesterovSmooth_extracted_1 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {γ : ℕ+ → ℝ} {alg : Nesterov f f' γ x₀}
   (hfun : ConvexOn ℝ univ f) (hg : ∀ (k : ℕ+), γ k = 2 / (↑↑k + 1)) (k : ℕ+) (x' : E) :
   f (Nesterov.x f f' γ x₀ ↑k) - f x' ≤
@@ -20,34 +20,34 @@ theorem extracted_1 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inner
       ↑(Nesterov.l f f' γ x₀) / 2 * ‖Nesterov.x f f' γ x₀ ↑k - Nesterov.y f f' γ x₀ k‖ ^ 2 := sorry
 
 
-theorem extracted_2 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem NesterovSmooth_extracted_2 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {γ : ℕ+ → ℝ} {alg : Nesterov f f' γ x₀}
   (hfun : ConvexOn ℝ univ f) (hg : ∀ (k : ℕ+), γ k = 2 / (↑↑k + 1)) (k : ℕ+) :
   f' (Nesterov.y f f' γ x₀ k) = ↑(Nesterov.l f f' γ x₀) • (Nesterov.y f f' γ x₀ k - Nesterov.x f f' γ x₀ ↑k) := sorry
 
 
-theorem extracted_3 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem NesterovSmooth_extracted_3 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {γ : ℕ+ → ℝ} {alg : Nesterov f f' γ x₀}
   (hfun : ConvexOn ℝ univ f) (hg : ∀ (k : ℕ+), γ k = 2 / (↑↑k + 1)) (k : ℕ+) (x' : E)
   (this : f' (Nesterov.y f f' γ x₀ k) = ↑(Nesterov.l f f' γ x₀) • (Nesterov.y f f' γ x₀ k - Nesterov.x f f' γ x₀ ↑k)) :
   f (Nesterov.y f f' γ x₀ k) + ⟪f' (Nesterov.y f f' γ x₀ k), x' - Nesterov.y f f' γ x₀ k⟫_ℝ ≤ f x' := sorry
 
 
-theorem extracted_4 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem NesterovSmooth_extracted_4 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {γ : ℕ+ → ℝ} {alg : Nesterov f f' γ x₀}
   (hfun : ConvexOn ℝ univ f) (hg : ∀ (k : ℕ+), γ k = 2 / (↑↑k + 1)) (k : ℕ+)
   (this : f' (Nesterov.y f f' γ x₀ k) = ↑(Nesterov.l f f' γ x₀) • (Nesterov.y f f' γ x₀ k - Nesterov.x f f' γ x₀ ↑k)) :
   Nesterov.y f f' γ x₀ k ∈ univ := sorry
 
 
-theorem extracted_5 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem NesterovSmooth_extracted_5 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {γ : ℕ+ → ℝ} {alg : Nesterov f f' γ x₀}
   (hfun : ConvexOn ℝ univ f) (hg : ∀ (k : ℕ+), γ k = 2 / (↑↑k + 1)) (k : ℕ+) (x' : E)
   (this : f' (Nesterov.y f f' γ x₀ k) = ↑(Nesterov.l f f' γ x₀) • (Nesterov.y f f' γ x₀ k - Nesterov.x f f' γ x₀ ↑k)) :
   x' ∈ univ := sorry
 
 
-theorem extracted_6 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem NesterovSmooth_extracted_6 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {γ : ℕ+ → ℝ} {alg : Nesterov f f' γ x₀}
   (hfun : ConvexOn ℝ univ f) (hg : ∀ (k : ℕ+), γ k = 2 / (↑↑k + 1)) (k : ℕ+) (x' : E)
   (this : f' (Nesterov.y f f' γ x₀ k) = ↑(Nesterov.l f f' γ x₀) • (Nesterov.y f f' γ x₀ k - Nesterov.x f f' γ x₀ ↑k))
@@ -57,7 +57,7 @@ theorem extracted_6 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inner
       ↑(Nesterov.l f f' γ x₀) / 2 * ‖Nesterov.x f f' γ x₀ ↑k - Nesterov.y f f' γ x₀ k‖ ^ 2 := sorry
 
 
-theorem extracted_7 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem NesterovSmooth_extracted_7 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {γ : ℕ+ → ℝ} {alg : Nesterov f f' γ x₀}
   (hfun : ConvexOn ℝ univ f) (hg : ∀ (k : ℕ+), γ k = 2 / (↑↑k + 1)) (k : ℕ+) (x' : E)
   (this : f' (Nesterov.y f f' γ x₀ k) = ↑(Nesterov.l f f' γ x₀) • (Nesterov.y f f' γ x₀ k - Nesterov.x f f' γ x₀ ↑k))
@@ -69,7 +69,7 @@ theorem extracted_7 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inner
       ↑(Nesterov.l f f' γ x₀) / 2 * ‖Nesterov.x f f' γ x₀ ↑k - Nesterov.y f f' γ x₀ k‖ ^ 2 := sorry
 
 
-theorem extracted_8 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem NesterovSmooth_extracted_8 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {γ : ℕ+ → ℝ} {alg : Nesterov f f' γ x₀}
   (hfun : ConvexOn ℝ univ f) (hg : ∀ (k : ℕ+), γ k = 2 / (↑↑k + 1)) (k : ℕ+) (x' : E)
   (this : f' (Nesterov.y f f' γ x₀ k) = ↑(Nesterov.l f f' γ x₀) • (Nesterov.y f f' γ x₀ k - Nesterov.x f f' γ x₀ ↑k))
@@ -82,7 +82,7 @@ theorem extracted_8 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inner
       ↑(Nesterov.l f f' γ x₀) / 2 * ‖Nesterov.x f f' γ x₀ ↑k - Nesterov.y f f' γ x₀ k‖ ^ 2 := sorry
 
 
-theorem extracted_9 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem NesterovSmooth_extracted_9 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {γ : ℕ+ → ℝ} {alg : Nesterov f f' γ x₀}
   (hfun : ConvexOn ℝ univ f) (hg : ∀ (k : ℕ+), γ k = 2 / (↑↑k + 1)) (k : ℕ+) (x' : E)
   (this : f' (Nesterov.y f f' γ x₀ k) = ↑(Nesterov.l f f' γ x₀) • (Nesterov.y f f' γ x₀ k - Nesterov.x f f' γ x₀ ↑k))
@@ -94,7 +94,7 @@ theorem extracted_9 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inner
       ↑(Nesterov.l f f' γ x₀) / 2 * ‖Nesterov.x f f' γ x₀ ↑k - Nesterov.y f f' γ x₀ k‖ ^ 2 := sorry
 
 
-theorem extracted_10 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem NesterovSmooth_extracted_10 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {γ : ℕ+ → ℝ} {alg : Nesterov f f' γ x₀}
   (hfun : ConvexOn ℝ univ f) (hg : ∀ (k : ℕ+), γ k = 2 / (↑↑k + 1)) (k : ℕ+) (x' : E)
   (this : f' (Nesterov.y f f' γ x₀ k) = ↑(Nesterov.l f f' γ x₀) • (Nesterov.y f f' γ x₀ k - Nesterov.x f f' γ x₀ ↑k))
@@ -106,7 +106,7 @@ theorem extracted_10 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
       ↑(Nesterov.l f f' γ x₀) / 2 * ‖Nesterov.x f f' γ x₀ ↑k - Nesterov.y f f' γ x₀ k‖ ^ 2 := sorry
 
 
-theorem extracted_11 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem NesterovSmooth_extracted_11 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {γ : ℕ+ → ℝ} {alg : Nesterov f f' γ x₀}
   (hfun : ConvexOn ℝ univ f) (hg : ∀ (k : ℕ+), γ k = 2 / (↑↑k + 1)) (k : ℕ+) (x' : E)
   (this : f' (Nesterov.y f f' γ x₀ k) = ↑(Nesterov.l f f' γ x₀) • (Nesterov.y f f' γ x₀ k - Nesterov.x f f' γ x₀ ↑k))
@@ -119,7 +119,7 @@ theorem extracted_11 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
       ↑(Nesterov.l f f' γ x₀) / 2 * ‖Nesterov.x f f' γ x₀ ↑k - Nesterov.y f f' γ x₀ k‖ ^ 2 := sorry
 
 
-theorem extracted_12 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem NesterovSmooth_extracted_12 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {γ : ℕ+ → ℝ} {alg : Nesterov f f' γ x₀}
   (hfun : ConvexOn ℝ univ f) (hg : ∀ (k : ℕ+), γ k = 2 / (↑↑k + 1))
   (h2 :
@@ -135,7 +135,7 @@ theorem extracted_12 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
       ↑(Nesterov.l f f' γ x₀) / 2 * ‖Nesterov.x f f' γ x₀ ↑k - Nesterov.y f f' γ x₀ k‖ ^ 2 := sorry
 
 
-theorem extracted_13 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem NesterovSmooth_extracted_13 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {γ : ℕ+ → ℝ} {alg : Nesterov f f' γ x₀}
   (hfun : ConvexOn ℝ univ f) (hg : ∀ (k : ℕ+), γ k = 2 / (↑↑k + 1))
   (h2 :
@@ -149,7 +149,7 @@ theorem extracted_13 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
       (1 - γ k) * (f (Nesterov.x f f' γ x₀ ↑k) - f (Nesterov.x f f' γ x₀ (↑k - 1))) := sorry
 
 
-theorem extracted_14 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem NesterovSmooth_extracted_14 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {γ : ℕ+ → ℝ} {alg : Nesterov f f' γ x₀}
   (hfun : ConvexOn ℝ univ f) (hg : ∀ (k : ℕ+), γ k = 2 / (↑↑k + 1))
   (h2 :
@@ -165,10 +165,10 @@ theorem extracted_14 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
   (lzero : 0 < ↑↑k + 1) : γ k ≥ 0 := sorry
 
 
-theorem extracted_15 : 0 ≤ 2 := sorry
+theorem NesterovSmooth_extracted_15 : 0 ≤ 2 := sorry
 
 
-theorem extracted_16 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem NesterovSmooth_extracted_16 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {γ : ℕ+ → ℝ} {alg : Nesterov f f' γ x₀}
   (hfun : ConvexOn ℝ univ f) (hg : ∀ (k : ℕ+), γ k = 2 / (↑↑k + 1))
   (h2 :
@@ -184,7 +184,7 @@ theorem extracted_16 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
   (lzero : 0 < ↑↑k + 1) (hz : γ k ≥ 0) : γ k ≤ 1 := sorry
 
 
-theorem extracted_17 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem NesterovSmooth_extracted_17 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {γ : ℕ+ → ℝ} {alg : Nesterov f f' γ x₀}
   (hfun : ConvexOn ℝ univ f) (hg : ∀ (k : ℕ+), γ k = 2 / (↑↑k + 1))
   (h2 :
@@ -202,7 +202,7 @@ theorem extracted_17 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
     (1 - γ k) • Nesterov.x f f' γ x₀ (↑k - 1) + γ k • xm - Nesterov.x f f' γ x₀ ↑k := sorry
 
 
-theorem extracted_18 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem NesterovSmooth_extracted_18 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {γ : ℕ+ → ℝ} {alg : Nesterov f f' γ x₀}
   (hfun : ConvexOn ℝ univ f) (hg : ∀ (k : ℕ+), γ k = 2 / (↑↑k + 1))
   (h2 :
@@ -231,7 +231,7 @@ theorem extracted_18 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
           ↑(Nesterov.l f f' γ x₀) / 2 * ‖Nesterov.x f f' γ x₀ ↑k - Nesterov.y f f' γ x₀ k‖ ^ 2) := sorry
 
 
-theorem extracted_19 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem NesterovSmooth_extracted_19 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {γ : ℕ+ → ℝ} {alg : Nesterov f f' γ x₀}
   (hfun : ConvexOn ℝ univ f) (hg : ∀ (k : ℕ+), γ k = 2 / (↑↑k + 1))
   (h2 :
@@ -251,7 +251,7 @@ theorem extracted_19 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
   0 ≤ 1 - γ k := sorry
 
 
-theorem extracted_20 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem NesterovSmooth_extracted_20 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {γ : ℕ+ → ℝ} {alg : Nesterov f f' γ x₀}
   (hfun : ConvexOn ℝ univ f) (hg : ∀ (k : ℕ+), γ k = 2 / (↑↑k + 1))
   (h2 :
@@ -285,7 +285,7 @@ theorem extracted_20 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
       ↑(Nesterov.l f f' γ x₀) / 2 * ‖Nesterov.x f f' γ x₀ ↑k - Nesterov.y f f' γ x₀ k‖ ^ 2 := sorry
 
 
-theorem extracted_21 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem NesterovSmooth_extracted_21 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {γ : ℕ+ → ℝ} {alg : Nesterov f f' γ x₀}
   (hfun : ConvexOn ℝ univ f) (hg : ∀ (k : ℕ+), γ k = 2 / (↑↑k + 1))
   (h2 :
@@ -316,7 +316,7 @@ theorem extracted_21 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
       ↑(Nesterov.l f f' γ x₀) / 2 * ‖Nesterov.x f f' γ x₀ ↑k - Nesterov.y f f' γ x₀ k‖ ^ 2 := sorry
 
 
-theorem extracted_22 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem NesterovSmooth_extracted_22 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {γ : ℕ+ → ℝ} {alg : Nesterov f f' γ x₀}
   (hfun : ConvexOn ℝ univ f) (hg : ∀ (k : ℕ+), γ k = 2 / (↑↑k + 1))
   (h2 :
@@ -345,7 +345,7 @@ theorem extracted_22 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
       ↑(Nesterov.l f f' γ x₀) / 2 * ‖Nesterov.x f f' γ x₀ ↑k - Nesterov.y f f' γ x₀ k‖ ^ 2 := sorry
 
 
-theorem extracted_23 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem NesterovSmooth_extracted_23 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {γ : ℕ+ → ℝ} {alg : Nesterov f f' γ x₀}
   (hfun : ConvexOn ℝ univ f) (hg : ∀ (k : ℕ+), γ k = 2 / (↑↑k + 1))
   (h2 :
@@ -373,7 +373,7 @@ theorem extracted_23 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
       ↑(Nesterov.l f f' γ x₀) / 2 * ‖Nesterov.x f f' γ x₀ ↑k - Nesterov.y f f' γ x₀ k‖ ^ 2 := sorry
 
 
-theorem extracted_24 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem NesterovSmooth_extracted_24 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {γ : ℕ+ → ℝ} {alg : Nesterov f f' γ x₀}
   (hfun : ConvexOn ℝ univ f) (hg : ∀ (k : ℕ+), γ k = 2 / (↑↑k + 1))
   (h2 :
@@ -391,10 +391,10 @@ theorem extracted_24 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
   (k : ℕ+) : γ k ≥ 0 := sorry
 
 
-theorem extracted_25 : 0 ≤ 2 := sorry
+theorem NesterovSmooth_extracted_25 : 0 ≤ 2 := sorry
 
 
-theorem extracted_26 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem NesterovSmooth_extracted_26 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {γ : ℕ+ → ℝ} {alg : Nesterov f f' γ x₀}
   (hfun : ConvexOn ℝ univ f) (hg : ∀ (k : ℕ+), γ k = 2 / (↑↑k + 1))
   (h2 :
@@ -412,10 +412,10 @@ theorem extracted_26 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
   (k : ℕ+) (hz : γ k ≥ 0) : γ k > 0 := sorry
 
 
-theorem extracted_27 : 0 < 2 := sorry
+theorem NesterovSmooth_extracted_27 : 0 < 2 := sorry
 
 
-theorem extracted_28 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem NesterovSmooth_extracted_28 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {γ : ℕ+ → ℝ} {alg : Nesterov f f' γ x₀}
   (hfun : ConvexOn ℝ univ f) (hg : ∀ (k : ℕ+), γ k = 2 / (↑↑k + 1))
   (h2 :
@@ -438,7 +438,7 @@ theorem extracted_28 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
         ‖Nesterov.x f f' γ x₀ ↑k - (1 - γ k) • Nesterov.x f f' γ x₀ (↑k - 1) - γ k • xm‖ ^ 2) := sorry
 
 
-theorem extracted_29 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem NesterovSmooth_extracted_29 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {γ : ℕ+ → ℝ} {alg : Nesterov f f' γ x₀}
   (hfun : ConvexOn ℝ univ f) (hg : ∀ (k : ℕ+), γ k = 2 / (↑↑k + 1))
   (h2 :
@@ -460,7 +460,7 @@ theorem extracted_29 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
       (γ k ^ 2 * ‖Nesterov.v f f' γ x₀ (↑k - 1) - xm‖ ^ 2 - γ k ^ 2 * ‖Nesterov.v f f' γ x₀ ↑k - xm‖ ^ 2) := sorry
 
 
-theorem extracted_30 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem NesterovSmooth_extracted_30 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {γ : ℕ+ → ℝ} {alg : Nesterov f f' γ x₀}
   (hfun : ConvexOn ℝ univ f) (hg : ∀ (k : ℕ+), γ k = 2 / (↑↑k + 1))
   (h2 :
@@ -482,7 +482,7 @@ theorem extracted_30 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
       ((‖γ k‖ * ‖Nesterov.v f f' γ x₀ (↑k - 1) - xm‖) ^ 2 - (‖γ k‖ * ‖Nesterov.v f f' γ x₀ ↑k - xm‖) ^ 2) := sorry
 
 
-theorem extracted_31 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem NesterovSmooth_extracted_31 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {γ : ℕ+ → ℝ} {alg : Nesterov f f' γ x₀}
   (hfun : ConvexOn ℝ univ f) (hg : ∀ (k : ℕ+), γ k = 2 / (↑↑k + 1))
   (h2 :
@@ -504,7 +504,7 @@ theorem extracted_31 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
       (‖γ k • (Nesterov.v f f' γ x₀ (↑k - 1) - xm)‖ ^ 2 - ‖γ k • (Nesterov.v f f' γ x₀ ↑k - xm)‖ ^ 2) := sorry
 
 
-theorem extracted_32 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem NesterovSmooth_extracted_32 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {γ : ℕ+ → ℝ} {alg : Nesterov f f' γ x₀}
   (hfun : ConvexOn ℝ univ f) (hg : ∀ (k : ℕ+), γ k = 2 / (↑↑k + 1))
   (h2 :
@@ -529,7 +529,7 @@ theorem extracted_32 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
           2) := sorry
 
 
-theorem extracted_33 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem NesterovSmooth_extracted_33 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {γ : ℕ+ → ℝ} {alg : Nesterov f f' γ x₀}
   (hfun : ConvexOn ℝ univ f) (hg : ∀ (k : ℕ+), γ k = 2 / (↑↑k + 1))
   (h2 :
@@ -555,7 +555,7 @@ theorem extracted_33 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
         ‖Nesterov.x f f' γ x₀ ↑k - (1 - γ k) • Nesterov.x f f' γ x₀ (↑k - 1) - γ k • xm‖ ^ 2) := sorry
 
 
-theorem extracted_34 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem NesterovSmooth_extracted_34 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {γ : ℕ+ → ℝ} {alg : Nesterov f f' γ x₀}
   (hfun : ConvexOn ℝ univ f) (hg : ∀ (k : ℕ+), γ k = 2 / (↑↑k + 1))
   (h2 :
@@ -586,7 +586,7 @@ theorem extracted_34 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
       ↑(Nesterov.l f f' γ x₀) / 2 * ‖Nesterov.x f f' γ x₀ ↑k - Nesterov.y f f' γ x₀ k‖ ^ 2 := sorry
 
 
-theorem extracted_35 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem NesterovSmooth_extracted_35 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {γ : ℕ+ → ℝ} {alg : Nesterov f f' γ x₀}
   (hfun : ConvexOn ℝ univ f) (hg : ∀ (k : ℕ+), γ k = 2 / (↑↑k + 1))
   (h2 :
@@ -621,7 +621,7 @@ theorem extracted_35 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
           ⟪Nesterov.y f f' γ x₀ k, (1 - γ k) • Nesterov.x f f' γ x₀ (↑k - 1) + γ k • xm⟫_ℝ) := sorry
 
 
-theorem extracted_36 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem NesterovSmooth_extracted_36 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {γ : ℕ+ → ℝ} {alg : Nesterov f f' γ x₀}
   (hfun : ConvexOn ℝ univ f) (hg : ∀ (k : ℕ+), γ k = 2 / (↑↑k + 1))
   (h2 :
@@ -653,7 +653,7 @@ theorem extracted_36 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
           (1 - γ k) • Nesterov.x f f' γ x₀ (↑k - 1) + γ k • xm⟫_ℝ := sorry
 
 
-theorem extracted_37 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem NesterovSmooth_extracted_37 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {γ : ℕ+ → ℝ} {alg : Nesterov f f' γ x₀}
   (hfun : ConvexOn ℝ univ f) (hg : ∀ (k : ℕ+), γ k = 2 / (↑↑k + 1))
   (h2 :
@@ -685,7 +685,7 @@ theorem extracted_37 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
             Nesterov.x f f' γ x₀ ↑k⟫_ℝ := sorry
 
 
-theorem extracted_38 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem NesterovSmooth_extracted_38 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {γ : ℕ+ → ℝ} {alg : Nesterov f f' γ x₀}
   (hfun : ConvexOn ℝ univ f) (hg : ∀ (k : ℕ+), γ k = 2 / (↑↑k + 1))
   (h2 :
@@ -718,7 +718,7 @@ theorem extracted_38 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
           (1 - γ k) • Nesterov.x f f' γ x₀ (↑k - 1) + γ k • xm - Nesterov.x f f' γ x₀ ↑k⟫_ℝ := sorry
 
 
-theorem extracted_39 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem NesterovSmooth_extracted_39 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {γ : ℕ+ → ℝ} {alg : Nesterov f f' γ x₀}
   (hfun : ConvexOn ℝ univ f) (hg : ∀ (k : ℕ+), γ k = 2 / (↑↑k + 1))
   (h2 :
@@ -753,7 +753,7 @@ theorem extracted_39 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
           (1 - γ k) • Nesterov.x f f' γ x₀ (↑k - 1) + γ k • xm - Nesterov.x f f' γ x₀ ↑k⟫_ℝ := sorry
 
 
-theorem extracted_40 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem NesterovSmooth_extracted_40 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {γ : ℕ+ → ℝ} {alg : Nesterov f f' γ x₀}
   (hfun : ConvexOn ℝ univ f) (hg : ∀ (k : ℕ+), γ k = 2 / (↑↑k + 1))
   (h2 :
@@ -789,14 +789,14 @@ theorem extracted_40 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
           ‖Nesterov.y f f' γ x₀ k‖ ^ 2) := sorry
 
 
-theorem extracted_41 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem NesterovSmooth_extracted_41 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {γ : ℕ+ → ℝ} {alg : Nesterov f f' γ x₀}
   (hfun : ConvexOn ℝ univ f) (hg : ∀ (k : ℕ+), γ k = 2 / (↑↑k + 1)) (min : IsMinOn f univ xm)
   (con : ∀ (k : ℕ+), (1 - γ k) / γ k ^ 2 ≤ 1 / γ (k - 1) ^ 2) (k : ℕ+) :
   f (Nesterov.x f f' γ x₀ ↑k) - f xm ≤ 2 * ↑(Nesterov.l f f' γ x₀) / (↑↑k + 1) ^ 2 * ‖x₀ - xm‖ ^ 2 := sorry
 
 
-theorem extracted_42 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem NesterovSmooth_extracted_42 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {γ : ℕ+ → ℝ} {alg : Nesterov f f' γ x₀}
   (hfun : ConvexOn ℝ univ f) (hg : ∀ (k : ℕ+), γ k = 2 / (↑↑k + 1)) (min : IsMinOn f univ xm)
   (con : ∀ (k : ℕ+), (1 - γ k) / γ k ^ 2 ≤ 1 / γ (k - 1) ^ 2) (k : ℕ+) :
@@ -805,7 +805,7 @@ theorem extracted_42 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
       (‖Nesterov.v f f' γ x₀ (↑k - 1) - xm‖ ^ 2 - ‖Nesterov.v f f' γ x₀ ↑k - xm‖ ^ 2) := sorry
 
 
-theorem extracted_43 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem NesterovSmooth_extracted_43 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {γ : ℕ+ → ℝ} {alg : Nesterov f f' γ x₀}
   (hfun : ConvexOn ℝ univ f) (hg : ∀ (k : ℕ+), γ k = 2 / (↑↑k + 1)) (min : IsMinOn f univ xm)
   (con : ∀ (k : ℕ+), (1 - γ k) / γ k ^ 2 ≤ 1 / γ (k - 1) ^ 2)
@@ -821,7 +821,7 @@ theorem extracted_43 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
       ↑(Nesterov.l f f' γ x₀) / 2 * ‖Nesterov.v f f' γ x₀ (↑k - 1) - xm‖ ^ 2 := sorry
 
 
-theorem extracted_44 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem NesterovSmooth_extracted_44 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {γ : ℕ+ → ℝ} {alg : Nesterov f f' γ x₀}
   (hfun : ConvexOn ℝ univ f) (hg : ∀ (k : ℕ+), γ k = 2 / (↑↑k + 1)) (min : IsMinOn f univ xm) (k : ℕ+)
   (h4 :
@@ -831,10 +831,10 @@ theorem extracted_44 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
   (con : (1 - γ k) / γ k ^ 2 ≤ 1 / γ (k - 1) ^ 2) : γ k ^ 2 > 0 := sorry
 
 
-theorem extracted_45 : 0 < 2 ^ 2 := sorry
+theorem NesterovSmooth_extracted_45 : 0 < 2 ^ 2 := sorry
 
 
-theorem extracted_46 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem NesterovSmooth_extracted_46 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {γ : ℕ+ → ℝ} {alg : Nesterov f f' γ x₀}
   (hfun : ConvexOn ℝ univ f) (hg : ∀ (k : ℕ+), γ k = 2 / (↑↑k + 1)) (min : IsMinOn f univ xm) (k : ℕ+)
   (h4 :
@@ -845,7 +845,7 @@ theorem extracted_46 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
   (con : (1 - γ k) / γ k ^ 2 ≤ 1 / γ (k - 1) ^ 2) (this : γ k ^ 2 > 0) : γ k ^ 2 ≠ 0 := sorry
 
 
-theorem extracted_47 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem NesterovSmooth_extracted_47 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {γ : ℕ+ → ℝ} {alg : Nesterov f f' γ x₀}
   (hfun : ConvexOn ℝ univ f) (hg : ∀ (k : ℕ+), γ k = 2 / (↑↑k + 1)) (min : IsMinOn f univ xm) (k : ℕ+)
   (h4 :
@@ -856,7 +856,7 @@ theorem extracted_47 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
   (con : (1 - γ k) / γ k ^ 2 ≤ 1 / γ (k - 1) ^ 2) (this : γ k ^ 2 > 0) : Nesterov.x f f' γ x₀ (↑k - 1) ∈ univ := sorry
 
 
-theorem extracted_48 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem NesterovSmooth_extracted_48 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {γ : ℕ+ → ℝ} {alg : Nesterov f f' γ x₀}
   (hfun : ConvexOn ℝ univ f) (hg : ∀ (k : ℕ+), γ k = 2 / (↑↑k + 1)) (min : IsMinOn f univ xm) (k : ℕ+)
   (h4 :
@@ -868,7 +868,7 @@ theorem extracted_48 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
   (this : f xm ≤ f (Nesterov.x f f' γ x₀ (↑k - 1))) : 0 ≤ f (Nesterov.x f f' γ x₀ (↑k - 1)) - f xm := sorry
 
 
-theorem extracted_49 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem NesterovSmooth_extracted_49 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {γ : ℕ+ → ℝ} {alg : Nesterov f f' γ x₀}
   (hfun : ConvexOn ℝ univ f) (hg : ∀ (k : ℕ+), γ k = 2 / (↑↑k + 1)) (min : IsMinOn f univ xm)
   (con : ∀ (k : ℕ+), (1 - γ k) / γ k ^ 2 ≤ 1 / γ (k - 1) ^ 2)
@@ -890,7 +890,7 @@ theorem extracted_49 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
       ↑(Nesterov.l f f' γ x₀) / 2 * ‖Nesterov.v f f' γ x₀ 1 - xm‖ ^ 2 := sorry
 
 
-theorem extracted_50 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem NesterovSmooth_extracted_50 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {γ : ℕ+ → ℝ} {alg : Nesterov f f' γ x₀}
   (hfun : ConvexOn ℝ univ f) (hg : ∀ (k : ℕ+), γ k = 2 / (↑↑k + 1)) (min : IsMinOn f univ xm)
   (con : ∀ (k : ℕ+), (1 - γ k) / γ k ^ 2 ≤ 1 / γ (k - 1) ^ 2)
@@ -913,7 +913,7 @@ theorem extracted_50 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
   ↑(j + 1) - 1 = ↑j := sorry
 
 
-theorem extracted_51 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem NesterovSmooth_extracted_51 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {γ : ℕ+ → ℝ} {alg : Nesterov f f' γ x₀}
   (hfun : ConvexOn ℝ univ f) (hg : ∀ (k : ℕ+), γ k = 2 / (↑↑k + 1)) (min : IsMinOn f univ xm)
   (con : ∀ (k : ℕ+), (1 - γ k) / γ k ^ 2 ≤ 1 / γ (k - 1) ^ 2)
@@ -936,7 +936,7 @@ theorem extracted_51 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
   (y1 : ↑(j + 1) - 1 = ↑j) : j + 1 - 1 = j := sorry
 
 
-theorem extracted_52 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem NesterovSmooth_extracted_52 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {γ : ℕ+ → ℝ} {alg : Nesterov f f' γ x₀}
   (hfun : ConvexOn ℝ univ f) (hg : ∀ (k : ℕ+), γ k = 2 / (↑↑k + 1)) (min : IsMinOn f univ xm)
   (con : ∀ (k : ℕ+), (1 - γ k) / γ k ^ 2 ≤ 1 / γ (k - 1) ^ 2)
@@ -962,7 +962,7 @@ theorem extracted_52 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
       ↑(Nesterov.l f f' γ x₀) / 2 * ‖Nesterov.v f f' γ x₀ 0 - xm‖ ^ 2 := sorry
 
 
-theorem extracted_53 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem NesterovSmooth_extracted_53 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {γ : ℕ+ → ℝ} {alg : Nesterov f f' γ x₀}
   (hfun : ConvexOn ℝ univ f) (hg : ∀ (k : ℕ+), γ k = 2 / (↑↑k + 1)) (min : IsMinOn f univ xm)
   (con : ∀ (k : ℕ+), (1 - γ k) / γ k ^ 2 ≤ 1 / γ (k - 1) ^ 2)
@@ -994,7 +994,7 @@ theorem extracted_53 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
     ↑(Nesterov.l f f' γ x₀) / 2 * ‖x₀ - xm‖ ^ 2 := sorry
 
 
-theorem extracted_54 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem NesterovSmooth_extracted_54 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {γ : ℕ+ → ℝ} {alg : Nesterov f f' γ x₀}
   (hfun : ConvexOn ℝ univ f) (hg : ∀ (k : ℕ+), γ k = 2 / (↑↑k + 1)) (min : IsMinOn f univ xm)
   (con : ∀ (k : ℕ+), (1 - γ k) / γ k ^ 2 ≤ 1 / γ (k - 1) ^ 2)
@@ -1028,7 +1028,7 @@ theorem extracted_54 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
   1 / γ k ^ 2 * (f (Nesterov.x f f' γ x₀ ↑k) - f xm) ≤ ↑(Nesterov.l f f' γ x₀) / 2 * ‖x₀ - xm‖ ^ 2 := sorry
 
 
-theorem extracted_55 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem NesterovSmooth_extracted_55 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] {f : E → ℝ} {f' : E → E} {xm x₀ : E} {γ : ℕ+ → ℝ} {alg : Nesterov f f' γ x₀}
   (hfun : ConvexOn ℝ univ f) (hg : ∀ (k : ℕ+), γ k = 2 / (↑↑k + 1)) (min : IsMinOn f univ xm)
   (con : ∀ (k : ℕ+), (1 - γ k) / γ k ^ 2 ≤ 1 / γ (k - 1) ^ 2)

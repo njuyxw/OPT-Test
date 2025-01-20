@@ -4,7 +4,7 @@ import Convex
 
 open Set
 
-theorem extracted_0 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem ProximalGradient_extracted_0 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] [inst_3 : ProperSpace E] {x₀ : E} {f : E → ℝ} {f' : E → E} {h : E → ℝ}
   {alg : proximal_gradient_method f h f' x₀} (k : ℕ+) :
   f (proximal_gradient_method.x f h f' x₀ ↑k) + h (proximal_gradient_method.x f h f' x₀ ↑k) -
@@ -13,18 +13,18 @@ theorem extracted_0 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inner
     1 / (2 * ↑↑k * proximal_gradient_method.t f h f' x₀) * ‖x₀ - proximal_gradient_method.xm f h f' x₀‖ ^ 2 := sorry
 
 
-theorem extracted_1 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem ProximalGradient_extracted_1 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] [inst_3 : ProperSpace E] {x₀ : E} {f : E → ℝ} {f' : E → E} {h : E → ℝ}
   {alg : proximal_gradient_method f h f' x₀} : ContinuousOn (proximal_gradient_method.t f h f' x₀ • h) univ := sorry
 
 
-theorem extracted_2 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem ProximalGradient_extracted_2 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] [inst_3 : ProperSpace E] {x₀ : E} {f : E → ℝ} {f' : E → E} {h : E → ℝ}
   {alg : proximal_gradient_method f h f' x₀} (th : ContinuousOn (proximal_gradient_method.t f h f' x₀ • h) univ) :
   ConvexOn ℝ univ (proximal_gradient_method.t f h f' x₀ • h) := sorry
 
 
-theorem extracted_3 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem ProximalGradient_extracted_3 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] [inst_3 : ProperSpace E] {x₀ : E} {f : E → ℝ} {f' : E → E} {h : E → ℝ}
   {alg : proximal_gradient_method f h f' x₀} (th : ContinuousOn (proximal_gradient_method.t f h f' x₀ • h) univ)
   (th' : ConvexOn ℝ univ (proximal_gradient_method.t f h f' x₀ • h)) :
@@ -36,7 +36,7 @@ theorem extracted_3 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inner
   ∀ (z : E), Gt z - f' z ∈ SubderivAt h (z - proximal_gradient_method.t f h f' x₀ • Gt z) := sorry
 
 
-theorem extracted_4 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem ProximalGradient_extracted_4 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] [inst_3 : ProperSpace E] {x₀ : E} {f : E → ℝ} {f' : E → E} {h : E → ℝ}
   {alg : proximal_gradient_method f h f' x₀} (th : ContinuousOn (proximal_gradient_method.t f h f' x₀ • h) univ)
   (th' : ConvexOn ℝ univ (proximal_gradient_method.t f h f' x₀ • h)) :
@@ -51,7 +51,7 @@ theorem extracted_4 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inner
         th' := sorry
 
 
-theorem extracted_5 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem ProximalGradient_extracted_5 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] [inst_3 : ProperSpace E] {x₀ : E} {f : E → ℝ} {f' : E → E} {h : E → ℝ}
   {alg : proximal_gradient_method f h f' x₀} (th : ContinuousOn (proximal_gradient_method.t f h f' x₀ • h) univ)
   (th' : ConvexOn ℝ univ (proximal_gradient_method.t f h f' x₀ • h)) :
@@ -68,7 +68,7 @@ theorem extracted_5 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inner
         (z - proximal_gradient_method.t f h f' x₀ • Gt z) := sorry
 
 
-theorem extracted_6 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem ProximalGradient_extracted_6 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] [inst_3 : ProperSpace E] {x₀ : E} {f : E → ℝ} {f' : E → E} {h : E → ℝ}
   {alg : proximal_gradient_method f h f' x₀} (th : ContinuousOn (proximal_gradient_method.t f h f' x₀ • h) univ)
   (th' : ConvexOn ℝ univ (proximal_gradient_method.t f h f' x₀ • h)) :
@@ -84,7 +84,7 @@ theorem extracted_6 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inner
           proximal_gradient_method.t f h f' x₀ ^ 2 * ↑(proximal_gradient_method.L f h f' x₀) / 2 * ‖Gt x‖ ^ 2 := sorry
 
 
-theorem extracted_7 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem ProximalGradient_extracted_7 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] [inst_3 : ProperSpace E] {x₀ : E} {f : E → ℝ} {f' : E → E} {h : E → ℝ}
   {alg : proximal_gradient_method f h f' x₀} (th : ContinuousOn (proximal_gradient_method.t f h f' x₀ • h) univ)
   (th' : ConvexOn ℝ univ (proximal_gradient_method.t f h f' x₀ • h)) :
@@ -99,7 +99,7 @@ theorem extracted_7 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inner
       f y ≤ f x + ⟪f' x, y - x⟫_ℝ + ↑(proximal_gradient_method.L f h f' x₀) / 2 * ‖y - x‖ ^ 2 := sorry
 
 
-theorem extracted_8 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem ProximalGradient_extracted_8 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] [inst_3 : ProperSpace E] {x₀ : E} {f : E → ℝ} {f' : E → E} {h : E → ℝ}
   {alg : proximal_gradient_method f h f' x₀} (th : ContinuousOn (proximal_gradient_method.t f h f' x₀ • h) univ)
   (th' : ConvexOn ℝ univ (proximal_gradient_method.t f h f' x₀ • h)) :
@@ -115,7 +115,7 @@ theorem extracted_8 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inner
         y - x = -proximal_gradient_method.t f h f' x₀ • Gt x := sorry
 
 
-theorem extracted_9 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem ProximalGradient_extracted_9 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] [inst_3 : ProperSpace E] {x₀ : E} {f : E → ℝ} {f' : E → E} {h : E → ℝ}
   {alg : proximal_gradient_method f h f' x₀} (th : ContinuousOn (proximal_gradient_method.t f h f' x₀ • h) univ)
   (th' : ConvexOn ℝ univ (proximal_gradient_method.t f h f' x₀ • h)) :
@@ -135,7 +135,7 @@ theorem extracted_9 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inner
             proximal_gradient_method.t f h f' x₀ / 2 * ‖Gt x‖ ^ 2 := sorry
 
 
-theorem extracted_10 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem ProximalGradient_extracted_10 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] [inst_3 : ProperSpace E] {x₀ : E} {f : E → ℝ} {f' : E → E} {h : E → ℝ}
   {alg : proximal_gradient_method f h f' x₀} (th : ContinuousOn (proximal_gradient_method.t f h f' x₀ • h) univ)
   (th' : ConvexOn ℝ univ (proximal_gradient_method.t f h f' x₀ • h)) :
@@ -156,10 +156,10 @@ theorem extracted_10 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
             proximal_gradient_method.t f h f' x₀ / 2 * ‖Gt x‖ ^ 2 := sorry
 
 
-theorem extracted_11 : 0 ≤ 2 := sorry
+theorem ProximalGradient_extracted_11 : 0 ≤ 2 := sorry
 
 
-theorem extracted_12 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem ProximalGradient_extracted_12 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] [inst_3 : ProperSpace E] {x₀ : E} {f : E → ℝ} {f' : E → E} {h : E → ℝ}
   {alg : proximal_gradient_method f h f' x₀} (th : ContinuousOn (proximal_gradient_method.t f h f' x₀ • h) univ)
   (th' : ConvexOn ℝ univ (proximal_gradient_method.t f h f' x₀ • h)) :
@@ -178,7 +178,7 @@ theorem extracted_12 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
           ↑(proximal_gradient_method.L f h f' x₀) := sorry
 
 
-theorem extracted_13 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem ProximalGradient_extracted_13 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] [inst_3 : ProperSpace E] {x₀ : E} {f : E → ℝ} {f' : E → E} {h : E → ℝ}
   {alg : proximal_gradient_method f h f' x₀} (th : ContinuousOn (proximal_gradient_method.t f h f' x₀ • h) univ)
   (th' : ConvexOn ℝ univ (proximal_gradient_method.t f h f' x₀ • h)) :
@@ -197,7 +197,7 @@ theorem extracted_13 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
         proximal_gradient_method.t f h f' x₀ := sorry
 
 
-theorem extracted_14 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem ProximalGradient_extracted_14 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] [inst_3 : ProperSpace E] {x₀ : E} {f : E → ℝ} {f' : E → E} {h : E → ℝ}
   {alg : proximal_gradient_method f h f' x₀} (th : ContinuousOn (proximal_gradient_method.t f h f' x₀ • h) univ)
   (th' : ConvexOn ℝ univ (proximal_gradient_method.t f h f' x₀ • h)) :
@@ -214,7 +214,7 @@ theorem extracted_14 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
       ↑(proximal_gradient_method.L f h f' x₀) ≠ 0 := sorry
 
 
-theorem extracted_15 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem ProximalGradient_extracted_15 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] [inst_3 : ProperSpace E] {x₀ : E} {f : E → ℝ} {f' : E → E} {h : E → ℝ}
   {alg : proximal_gradient_method f h f' x₀} (th : ContinuousOn (proximal_gradient_method.t f h f' x₀ • h) univ)
   (th' : ConvexOn ℝ univ (proximal_gradient_method.t f h f' x₀ • h)) :
@@ -235,7 +235,7 @@ theorem extracted_15 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
         ∀ (x z : E), f x + ⟪f' x, z - x⟫_ℝ ≤ f z := sorry
 
 
-theorem extracted_16 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem ProximalGradient_extracted_16 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] [inst_3 : ProperSpace E] {x₀ : E} {f : E → ℝ} {f' : E → E} {h : E → ℝ}
   {alg : proximal_gradient_method f h f' x₀} (th : ContinuousOn (proximal_gradient_method.t f h f' x₀ • h) univ)
   (th' : ConvexOn ℝ univ (proximal_gradient_method.t f h f' x₀ • h)) :
@@ -260,7 +260,7 @@ theorem extracted_16 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
               h z := sorry
 
 
-theorem extracted_17 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem ProximalGradient_extracted_17 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] [inst_3 : ProperSpace E] {x₀ : E} {f : E → ℝ} {f' : E → E} {h : E → ℝ}
   {alg : proximal_gradient_method f h f' x₀} (th : ContinuousOn (proximal_gradient_method.t f h f' x₀ • h) univ)
   (th' : ConvexOn ℝ univ (proximal_gradient_method.t f h f' x₀ • h)) :
@@ -288,7 +288,7 @@ theorem extracted_17 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
                 h z - ⟪Gt x - f' x, z - x + proximal_gradient_method.t f h f' x₀ • Gt x⟫_ℝ := sorry
 
 
-theorem extracted_18 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem ProximalGradient_extracted_18 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] [inst_3 : ProperSpace E] {x₀ : E} {f : E → ℝ} {f' : E → E} {h : E → ℝ}
   {alg : proximal_gradient_method f h f' x₀} (th : ContinuousOn (proximal_gradient_method.t f h f' x₀ • h) univ)
   (th' : ConvexOn ℝ univ (proximal_gradient_method.t f h f' x₀ • h)) :
@@ -320,7 +320,7 @@ theorem extracted_18 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
                   φ z + ⟪Gt x, x - z⟫_ℝ - proximal_gradient_method.t f h f' x₀ / 2 * ‖Gt x‖ ^ 2 := sorry
 
 
-theorem extracted_19 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem ProximalGradient_extracted_19 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] [inst_3 : ProperSpace E] {x₀ : E} {f : E → ℝ} {f' : E → E} {h : E → ℝ}
   {alg : proximal_gradient_method f h f' x₀} (th : ContinuousOn (proximal_gradient_method.t f h f' x₀ • h) univ)
   (th' : ConvexOn ℝ univ (proximal_gradient_method.t f h f' x₀ • h)) :
@@ -354,7 +354,7 @@ theorem extracted_19 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
                     (h z - ⟪Gt x - f' x, z - x + proximal_gradient_method.t f h f' x₀ • Gt x⟫_ℝ) := sorry
 
 
-theorem extracted_20 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem ProximalGradient_extracted_20 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] [inst_3 : ProperSpace E] {x₀ : E} {f : E → ℝ} {f' : E → E} {h : E → ℝ}
   {alg : proximal_gradient_method f h f' x₀} (th : ContinuousOn (proximal_gradient_method.t f h f' x₀ • h) univ)
   (th' : ConvexOn ℝ univ (proximal_gradient_method.t f h f' x₀ • h)) :
@@ -389,7 +389,7 @@ theorem extracted_20 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
                     (h z - ⟪Gt x - f' x, z - x + proximal_gradient_method.t f h f' x₀ • Gt x⟫_ℝ) := sorry
 
 
-theorem extracted_21 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem ProximalGradient_extracted_21 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] [inst_3 : ProperSpace E] {x₀ : E} {f : E → ℝ} {f' : E → E} {h : E → ℝ}
   {alg : proximal_gradient_method f h f' x₀} (th : ContinuousOn (proximal_gradient_method.t f h f' x₀ • h) univ)
   (th' : ConvexOn ℝ univ (proximal_gradient_method.t f h f' x₀ • h)) :
@@ -423,7 +423,7 @@ theorem extracted_21 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
                   φ z + ⟪Gt x, x - z⟫_ℝ - proximal_gradient_method.t f h f' x₀ / 2 * ‖Gt x‖ ^ 2 := sorry
 
 
-theorem extracted_22 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem ProximalGradient_extracted_22 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] [inst_3 : ProperSpace E] {x₀ : E} {f : E → ℝ} {f' : E → E} {h : E → ℝ}
   {alg : proximal_gradient_method f h f' x₀} (th : ContinuousOn (proximal_gradient_method.t f h f' x₀ • h) univ)
   (th' : ConvexOn ℝ univ (proximal_gradient_method.t f h f' x₀ • h)) :
@@ -454,7 +454,7 @@ theorem extracted_22 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
                   -proximal_gradient_method.t f h f' x₀ / 2 * a := sorry
 
 
-theorem extracted_23 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem ProximalGradient_extracted_23 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] [inst_3 : ProperSpace E] {x₀ : E} {f : E → ℝ} {f' : E → E} {h : E → ℝ}
   {alg : proximal_gradient_method f h f' x₀} (th : ContinuousOn (proximal_gradient_method.t f h f' x₀ • h) univ)
   (th' : ConvexOn ℝ univ (proximal_gradient_method.t f h f' x₀ • h)) :
@@ -492,7 +492,7 @@ theorem extracted_23 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
                           2) := sorry
 
 
-theorem extracted_24 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem ProximalGradient_extracted_24 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] [inst_3 : ProperSpace E] {x₀ : E} {f : E → ℝ} {f' : E → E} {h : E → ℝ}
   {alg : proximal_gradient_method f h f' x₀} (th : ContinuousOn (proximal_gradient_method.t f h f' x₀ • h) univ)
   (th' : ConvexOn ℝ univ (proximal_gradient_method.t f h f' x₀ • h)) :
@@ -528,7 +528,7 @@ theorem extracted_24 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
                       proximal_gradient_method.t f h f' x₀ / 2 * ‖Gt x‖ ^ 2 := sorry
 
 
-theorem extracted_25 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem ProximalGradient_extracted_25 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] [inst_3 : ProperSpace E] {x₀ : E} {f : E → ℝ} {f' : E → E} {h : E → ℝ}
   {alg : proximal_gradient_method f h f' x₀} (th : ContinuousOn (proximal_gradient_method.t f h f' x₀ • h) univ)
   (th' : ConvexOn ℝ univ (proximal_gradient_method.t f h f' x₀ • h)) :
@@ -567,7 +567,7 @@ theorem extracted_25 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
                           2) := sorry
 
 
-theorem extracted_26 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem ProximalGradient_extracted_26 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] [inst_3 : ProperSpace E] {x₀ : E} {f : E → ℝ} {f' : E → E} {h : E → ℝ}
   {alg : proximal_gradient_method f h f' x₀} (th : ContinuousOn (proximal_gradient_method.t f h f' x₀ • h) univ)
   (th' : ConvexOn ℝ univ (proximal_gradient_method.t f h f' x₀ • h)) :
@@ -603,7 +603,7 @@ theorem extracted_26 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
                       (‖q‖ ^ 2 - ‖q - proximal_gradient_method.t f h f' x₀ • p‖ ^ 2) := sorry
 
 
-theorem extracted_27 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem ProximalGradient_extracted_27 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] [inst_3 : ProperSpace E] {x₀ : E} {f : E → ℝ} {f' : E → E} {h : E → ℝ}
   {alg : proximal_gradient_method f h f' x₀} (th : ContinuousOn (proximal_gradient_method.t f h f' x₀ • h) univ)
   (th' : ConvexOn ℝ univ (proximal_gradient_method.t f h f' x₀ • h)) :
@@ -636,7 +636,7 @@ theorem extracted_27 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
                 proximal_gradient_method.t f h f' x₀ ≠ 0 := sorry
 
 
-theorem extracted_28 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem ProximalGradient_extracted_28 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] [inst_3 : ProperSpace E] {x₀ : E} {f : E → ℝ} {f' : E → E} {h : E → ℝ}
   {alg : proximal_gradient_method f h f' x₀} (th : ContinuousOn (proximal_gradient_method.t f h f' x₀ • h) univ)
   (th' : ConvexOn ℝ univ (proximal_gradient_method.t f h f' x₀ • h)) :
@@ -678,7 +678,7 @@ theorem extracted_28 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
                         proximal_gradient_method.t f h f' x₀ • Gt (proximal_gradient_method.x f h f' x₀ i) := sorry
 
 
-theorem extracted_29 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem ProximalGradient_extracted_29 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] [inst_3 : ProperSpace E] {x₀ : E} {f : E → ℝ} {f' : E → E} {h : E → ℝ}
   {alg : proximal_gradient_method f h f' x₀} (th : ContinuousOn (proximal_gradient_method.t f h f' x₀ • h) univ)
   (th' : ConvexOn ℝ univ (proximal_gradient_method.t f h f' x₀ • h)) :
@@ -723,7 +723,7 @@ theorem extracted_29 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
                         φ (proximal_gradient_method.x f h f' x₀ i) := sorry
 
 
-theorem extracted_30 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem ProximalGradient_extracted_30 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] [inst_3 : ProperSpace E] {x₀ : E} {f : E → ℝ} {f' : E → E} {h : E → ℝ}
   {alg : proximal_gradient_method f h f' x₀} (th : ContinuousOn (proximal_gradient_method.t f h f' x₀ • h) univ)
   (th' : ConvexOn ℝ univ (proximal_gradient_method.t f h f' x₀ • h)) :
@@ -778,7 +778,7 @@ theorem extracted_30 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
                             ‖Gt (proximal_gradient_method.x f h f' x₀ i)‖ ^ 2 := sorry
 
 
-theorem extracted_31 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem ProximalGradient_extracted_31 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] [inst_3 : ProperSpace E] {x₀ : E} {f : E → ℝ} {f' : E → E} {h : E → ℝ}
   {alg : proximal_gradient_method f h f' x₀} (th : ContinuousOn (proximal_gradient_method.t f h f' x₀ • h) univ)
   (th' : ConvexOn ℝ univ (proximal_gradient_method.t f h f' x₀ • h)) :
@@ -830,7 +830,7 @@ theorem extracted_31 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
                         φ (proximal_gradient_method.x f h f' x₀ i) := sorry
 
 
-theorem extracted_32 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem ProximalGradient_extracted_32 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] [inst_3 : ProperSpace E] {x₀ : E} {f : E → ℝ} {f' : E → E} {h : E → ℝ}
   {alg : proximal_gradient_method f h f' x₀} (th : ContinuousOn (proximal_gradient_method.t f h f' x₀ • h) univ)
   (th' : ConvexOn ℝ univ (proximal_gradient_method.t f h f' x₀ • h)) :
@@ -878,7 +878,7 @@ theorem extracted_32 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
                             φ (proximal_gradient_method.x f h f' x₀ i) := sorry
 
 
-theorem extracted_33 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem ProximalGradient_extracted_33 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] [inst_3 : ProperSpace E] {x₀ : E} {f : E → ℝ} {f' : E → E} {h : E → ℝ}
   {alg : proximal_gradient_method f h f' x₀} (th : ContinuousOn (proximal_gradient_method.t f h f' x₀ • h) univ)
   (th' : ConvexOn ℝ univ (proximal_gradient_method.t f h f' x₀ • h)) :
@@ -926,7 +926,7 @@ theorem extracted_33 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
                           ∑ n ∈ Finset.range (j - i), (φx (n + 1) - φx n) = φx (j - i) - φx 0 := sorry
 
 
-theorem extracted_34 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem ProximalGradient_extracted_34 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] [inst_3 : ProperSpace E] {x₀ : E} {f : E → ℝ} {f' : E → E} {h : E → ℝ}
   {alg : proximal_gradient_method f h f' x₀} (th : ContinuousOn (proximal_gradient_method.t f h f' x₀ • h) univ)
   (th' : ConvexOn ℝ univ (proximal_gradient_method.t f h f' x₀ • h)) :
@@ -976,7 +976,7 @@ theorem extracted_34 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
                             ∀ (n : ℕ), diffφ n ≤ 0 := sorry
 
 
-theorem extracted_35 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem ProximalGradient_extracted_35 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] [inst_3 : ProperSpace E] {x₀ : E} {f : E → ℝ} {f' : E → E} {h : E → ℝ}
   {alg : proximal_gradient_method f h f' x₀} (th : ContinuousOn (proximal_gradient_method.t f h f' x₀ • h) univ)
   (th' : ConvexOn ℝ univ (proximal_gradient_method.t f h f' x₀ • h)) :
@@ -1025,7 +1025,7 @@ theorem extracted_35 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
                             φx (j - i) - φx 0 ≤ 0 := sorry
 
 
-theorem extracted_36 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem ProximalGradient_extracted_36 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] [inst_3 : ProperSpace E] {x₀ : E} {f : E → ℝ} {f' : E → E} {h : E → ℝ}
   {alg : proximal_gradient_method f h f' x₀} (th : ContinuousOn (proximal_gradient_method.t f h f' x₀ • h) univ)
   (th' : ConvexOn ℝ univ (proximal_gradient_method.t f h f' x₀ • h)) :
@@ -1081,7 +1081,7 @@ theorem extracted_36 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
                                     2 := sorry
 
 
-theorem extracted_37 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem ProximalGradient_extracted_37 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] [inst_3 : ProperSpace E] {x₀ : E} {f : E → ℝ} {f' : E → E} {h : E → ℝ}
   {alg : proximal_gradient_method f h f' x₀} (th : ContinuousOn (proximal_gradient_method.t f h f' x₀ • h) univ)
   (th' : ConvexOn ℝ univ (proximal_gradient_method.t f h f' x₀ • h)) :
@@ -1133,7 +1133,7 @@ theorem extracted_37 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
                                 φ (proximal_gradient_method.xm f h f' x₀) := sorry
 
 
-theorem extracted_38 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem ProximalGradient_extracted_38 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] [inst_3 : ProperSpace E] {x₀ : E} {f : E → ℝ} {f' : E → E} {h : E → ℝ}
   {alg : proximal_gradient_method f h f' x₀} (th : ContinuousOn (proximal_gradient_method.t f h f' x₀ • h) univ)
   (th' : ConvexOn ℝ univ (proximal_gradient_method.t f h f' x₀ • h)) :
@@ -1189,7 +1189,7 @@ theorem extracted_38 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
                                     2) := sorry
 
 
-theorem extracted_39 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem ProximalGradient_extracted_39 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] [inst_3 : ProperSpace E] {x₀ : E} {f : E → ℝ} {f' : E → E} {h : E → ℝ}
   {alg : proximal_gradient_method f h f' x₀} (th : ContinuousOn (proximal_gradient_method.t f h f' x₀ • h) univ)
   (th' : ConvexOn ℝ univ (proximal_gradient_method.t f h f' x₀ • h)) :
@@ -1255,12 +1255,12 @@ theorem extracted_39 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
                                     2 := sorry
 
 
-theorem extracted_40 (k : ℕ) :
+theorem ProximalGradient_extracted_40 (k : ℕ) :
   let s := Finset.range k;
   k = s.card := sorry
 
 
-theorem extracted_41 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem ProximalGradient_extracted_41 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] [inst_3 : ProperSpace E] {x₀ : E} {f : E → ℝ} {f' : E → E} {h : E → ℝ}
   {alg : proximal_gradient_method f h f' x₀} (k : ℕ+)
   (th : ContinuousOn (proximal_gradient_method.t f h f' x₀ • h) univ)
@@ -1337,7 +1337,7 @@ theorem extracted_41 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
                                     φ (proximal_gradient_method.xm f h f' x₀))) := sorry
 
 
-theorem extracted_42 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem ProximalGradient_extracted_42 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] [inst_3 : ProperSpace E] {x₀ : E} {f : E → ℝ} {f' : E → E} {h : E → ℝ}
   {alg : proximal_gradient_method f h f' x₀} (k : ℕ+)
   (th : ContinuousOn (proximal_gradient_method.t f h f' x₀ • h) univ)
@@ -1416,7 +1416,7 @@ theorem extracted_42 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
                                       2) := sorry
 
 
-theorem extracted_43 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem ProximalGradient_extracted_43 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] [inst_3 : ProperSpace E] {x₀ : E} {f : E → ℝ} {f' : E → E} {h : E → ℝ}
   {alg : proximal_gradient_method f h f' x₀} (k : ℕ+)
   (th : ContinuousOn (proximal_gradient_method.t f h f' x₀ • h) univ)
@@ -1494,7 +1494,7 @@ theorem extracted_43 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : Inne
                                   2 := sorry
 
 
-theorem extracted_44 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
+theorem ProximalGradient_extracted_44 {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : InnerProductSpace ℝ E]
   [inst_2 : CompleteSpace E] [inst_3 : ProperSpace E] {x₀ : E} {f : E → ℝ} {f' : E → E} {h : E → ℝ}
   {alg : proximal_gradient_method f h f' x₀} (k : ℕ+)
   (th : ContinuousOn (proximal_gradient_method.t f h f' x₀ • h) univ)
